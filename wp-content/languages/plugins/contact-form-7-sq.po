@@ -1,0 +1,1807 @@
+# Translation of Plugins - Contact Form 7 - Stable (latest release) in Albanian
+# This file is distributed under the same license as the Plugins - Contact Form 7 - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-01-22 18:09:53+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: sq_AL\n"
+"Project-Id-Version: Plugins - Contact Form 7 - Stable (latest release)\n"
+
+#. translators: 1: blog name, 2: confirmation link
+#: modules/constant-contact/doi.php:76 modules/sendinblue/doi.php:84
+msgid ""
+"Hello,\n"
+"\n"
+"This is a confirmation email sent from %1$s.\n"
+"\n"
+"We have received your submission to our web form, according to which you have allowed us to add you to our contact list. But, the process has not yet been completed. To complete it, please click the following link.\n"
+"\n"
+"%2$s\n"
+"\n"
+"If it was not your intention, or if you have no idea why you received this message, please do not click on the link, and ignore this message. We will never collect or use your personal data without your clear consent.\n"
+"\n"
+"Sincerely,\n"
+"%1$s"
+msgstr ""
+"Tungjatjeta,\n"
+"\n"
+"Ky është një email ripohimi dërguar nga %1$s.\n"
+"\n"
+"Kemi marrë parashtrimin tuaj te formulari ynë internetor, sipas të cilit na keni lejuar t’ju shtojmë te lista jonë e kontakteve. Por procesi s’është plotësuar ende. Që ta plotësoni, ju lutemi, klikoni mbi lidhjen vijuese.\n"
+"\n"
+"%2$s\n"
+"\n"
+"Nëse s’qe dëshira juaj, ose nëse s’ia keni idenë pse e morët këtë mesazh, ju lutemi, mos klikoni mbi lidhjen dhe shpërfilleni këtë mesazh. S’do të grumbullojmë ose përdorim kurrë të dhëna tuajat personale pa pranimin e qëruar nga ana juaj.\n"
+"\n"
+"Sinqerisht,\n"
+"%1$s"
+
+#. translators: %s: blog name
+#: modules/constant-contact/doi.php:70 modules/sendinblue/doi.php:78
+msgid "Opt-in confirmation from %s"
+msgstr "Ripohim i llojit “opt-in” nga %s"
+
+#: modules/constant-contact/contact-form-properties.php:170
+msgid "You can set up the Constant Contact integration here. For details, see %s."
+msgstr "Këtu mund të ujdisni integrimin e Constant Contact. Për hollësi, shihni %s."
+
+#: modules/stripe/stripe.php:312
+msgid "Complete payment"
+msgstr "Plotësoni pagesën"
+
+#: modules/stripe/stripe.php:297
+msgid "Proceed to checkout"
+msgstr "Kaloni tek kasa"
+
+#: modules/stripe/stripe.php:185
+msgid "Payment is required. Please pay by credit card."
+msgstr "Lypset pagesë. Ju lutemi, paguani me një kartë krediti."
+
+#: modules/stripe/stripe.php:20
+msgid "Payments"
+msgstr "Pagesa"
+
+#: modules/stripe/service.php:207
+msgid "Publishable Key"
+msgstr "Kyç i Botueshëm"
+
+#: modules/stripe/service.php:184
+msgid "Stripe is not available on this site. It requires an HTTPS-enabled site."
+msgstr "Stripe-i s’është i ujdisur në këtë sajt. Lyp sajt të ujdisur për HTTPS."
+
+#: modules/stripe/service.php:169
+msgid "Stripe is active on this site."
+msgstr "Stripe-i s’është aktiv në këtë sajt."
+
+#: modules/stripe/service.php:162
+msgid "Stripe integration"
+msgstr "Integrim Stripe"
+
+#: modules/stripe/service.php:159
+msgid "Stripe is a simple and powerful way to accept payments online. Stripe has no setup fees, no monthly fees, and no hidden costs. Millions of businesses rely on Stripe’s software tools to accept payments securely and expand globally. For details, see %s."
+msgstr "Stripe-i është një rrugë e thjeshtë dhe e fuqishme për të pranuar pagesa internetore. Stripe-i nuk ka tarifa ujdisjeje, as tarifa mujore dhe as kosto të fshehura. Miliona biznese bazohen në mjete software-i Stripe për të pranuar pagesa në mënyrë të sigurt dhe për t’u zgjeruar globalisht. Për hollësi shihni %s."
+
+#. translators: 1: first name, 2: last name
+#: modules/sendinblue/sendinblue.php:102
+msgctxt "personal name"
+msgid "%1$s %2$s"
+msgstr "%1$s %2$s"
+
+#: includes/rest-api.php:458
+msgid "Unique identifier for the contact form."
+msgstr "Identifikues unik për formularin e kontaktit."
+
+#: includes/config-validator.php:447
+msgid "Dots are used in form-tag names."
+msgstr "Janë përdorur pika në emra etiketash formulari."
+
+#: admin/includes/welcome-panel.php:303
+msgid "Show welcome panel"
+msgstr "Shfaq panel mirëseardhjeje"
+
+#: admin/includes/welcome-panel.php:300
+msgid "Welcome panel"
+msgstr "Panel mirëseardhjeje"
+
+#: admin/includes/welcome-panel.php:169 modules/stripe/service.php:36
+msgid "Stripe"
+msgstr "Stripe"
+
+#: admin/includes/welcome-panel.php:168 modules/stripe/service.php:161
+msgid "https://contactform7.com/stripe-integration/"
+msgstr "https://contactform7.com/stripe-integration/"
+
+#. translators: 1: link labeled 'reCAPTCHA', 2: link labeled 'Stripe'
+#: admin/includes/welcome-panel.php:162
+msgid "With help from cloud-based machine learning, anti-spam services will protect your forms (%1$s). Even payment services are natively supported (%2$s)."
+msgstr "Me ndihmë nga të nxënit prej makinash me bazë në re, shërbimet anti-spam do të mbrojnë formularët tuaj (%1$s). Madje mbulohen së brendshmi edhe shërbime pagesash (%2$s)."
+
+#. translators: 1: link labeled 'Sendinblue', 2: link labeled 'Constant
+#. Contact'
+#: admin/includes/welcome-panel.php:150
+msgid "Your contact forms will become more powerful and versatile by integrating them with external APIs. With CRM and email marketing services, you can build your own contact lists (%1$s and %2$s)."
+msgstr "Formularët tuaj të kontakteve do të bëhen më të fuqishëm dhe të zhdërvjellët nga integrimi i tyre me API të jashtme. Me shërbime CRM dhe marketingu me email mund të krijoni listat tuaja të kontakteve (%1$s dhe %2$s)."
+
+#: admin/includes/welcome-panel.php:142
+msgid "You have strong allies to back you up."
+msgstr "Keni aleatë të fuqishëm t’ju mbrojnë krahët."
+
+#: admin/admin.php:508
+msgid "Integration with external APIs"
+msgstr "Integrim me API të jashtme"
+
+#: admin/admin.php:507
+msgid "https://contactform7.com/integration-with-external-apis/"
+msgstr "https://contactform7.com/integration-with-external-apis/"
+
+#. translators: %s: link labeled 'Integration with external APIs'
+#: admin/admin.php:505
+msgid "You can expand the possibilities of your contact forms by integrating them with external services. For details, see %s."
+msgstr "Mund të zgjeroni mundësitë e formularëve tuaj të kontaktit duke i integruar ato me shërbime të jashtme. Për hollësi shihni %s."
+
+#: admin/admin.php:65 admin/admin.php:500
+msgid "Integration with External API"
+msgstr "Integrim me API të Jashtme"
+
+#: modules/sendinblue/contact-form-properties.php:288
+msgid "Manage your email templates"
+msgstr "Administroni gjedhet tuaja email"
+
+#: modules/sendinblue/contact-form-properties.php:273
+msgid "You have no active email template yet."
+msgstr "Ende s’keni gjedhe email aktive."
+
+#: modules/sendinblue/contact-form-properties.php:253
+msgid "&mdash; Select &mdash;"
+msgstr "&mdash; Përzgjidhni &mdash;"
+
+#: modules/sendinblue/contact-form-properties.php:240
+msgid "Select an email template:"
+msgstr "Përzgjidhni një gjedhe email:"
+
+#: modules/sendinblue/contact-form-properties.php:223
+msgid "Send a welcome email to new contacts"
+msgstr "Dërgojuni kontakteve tuaja një email mirëseaardhjeje"
+
+#: modules/sendinblue/contact-form-properties.php:205
+#: modules/sendinblue/contact-form-properties.php:214
+msgid "Welcome email"
+msgstr "Email mirëseardhjeje"
+
+#: modules/constant-contact/contact-form-properties.php:267
+#: modules/sendinblue/contact-form-properties.php:195
+#: modules/sendinblue/contact-form-properties.php:289
+msgid "(opens in a new tab)"
+msgstr "(hapet në skedë të re)"
+
+#: modules/constant-contact/contact-form-properties.php:266
+#: modules/sendinblue/contact-form-properties.php:194
+msgid "Manage your contact lists"
+msgstr "Administroni listat tuajat të kontakteve"
+
+#: modules/constant-contact/contact-form-properties.php:251
+#: modules/sendinblue/contact-form-properties.php:179
+msgid "You have no contact list yet."
+msgstr "Ende s’keni listë kontaktesh."
+
+#: modules/constant-contact/contact-form-properties.php:227
+#: modules/sendinblue/contact-form-properties.php:155
+msgid "Select lists to which contacts are added:"
+msgstr "Përzgjidhni lista ku të shtohen kontaktet:"
+
+#: modules/constant-contact/contact-form-properties.php:210
+#: modules/sendinblue/contact-form-properties.php:138
+msgid "Add form submitters to your contact lists"
+msgstr "Shtojini parashtruesit e formularëve te listat tuaja të kontakteve"
+
+#: modules/constant-contact/contact-form-properties.php:192
+#: modules/constant-contact/contact-form-properties.php:201
+#: modules/sendinblue/contact-form-properties.php:120
+#: modules/sendinblue/contact-form-properties.php:129
+msgid "Contact lists"
+msgstr "Lista kontaktesh"
+
+#: modules/sendinblue/contact-form-properties.php:97
+msgid "You can set up the Sendinblue integration here. For details, see %s."
+msgstr "Këtu mund të ujdisni integrimin e Sendinblue-së. Për hollësi, shihni këtu %s."
+
+#: modules/sendinblue/service.php:207
+msgid "Save changes"
+msgstr "Ruaji ndryshimet"
+
+#: modules/sendinblue/service.php:203
+msgctxt "API keys"
+msgid "Remove key"
+msgstr "Hiqe kyçin"
+
+#: modules/sendinblue/service.php:182
+msgid "API key"
+msgstr "Kyç API"
+
+#: modules/sendinblue/service.php:168
+msgid "Setup integration"
+msgstr "Integrim ujdisjeje"
+
+#: modules/sendinblue/service.php:158
+msgid "Sendinblue is active on this site."
+msgstr "Sendinblue është aktiv në këtë sajt."
+
+#: modules/sendinblue/contact-form-properties.php:101
+#: modules/sendinblue/service.php:151
+msgid "Sendinblue integration"
+msgstr "Integrim me Sendinblue-në"
+
+#: admin/includes/welcome-panel.php:152
+#: modules/sendinblue/contact-form-properties.php:100
+#: modules/sendinblue/service.php:150
+msgid "https://contactform7.com/sendinblue-integration/"
+msgstr "https://contactform7.com/sendinblue-integration/"
+
+#: modules/sendinblue/service.php:148
+msgid "Store and organize your contacts while protecting user privacy on Sendinblue, the leading CRM & email marketing platform in Europe. Sendinblue offers unlimited contacts and advanced marketing features. For details, see %s."
+msgstr "Depozitoni dhe sistemoni kontaktet tuaj, teksa mbroni privatësinë e përdoruesve në Sendinblue, platforma kryesuese për CRM & marketing me email në Evropë. Sendinblue ofron kontakte të pakufizuara dhe veçori të thelluara marketingu. Për hollësi, shihni, see %s."
+
+#: modules/sendinblue/service.php:126
+msgid "You have not been authenticated. Make sure the provided API key is correct."
+msgstr "S’keni bërë mirëgilltësimin, Sigurohuni se kyçi API i dhënë është i saktë."
+
+#: admin/includes/welcome-panel.php:153
+#: modules/sendinblue/contact-form-properties.php:109
+#: modules/sendinblue/contact-form-properties.php:303
+#: modules/sendinblue/service.php:30
+msgid "Sendinblue"
+msgstr "Sendinblue"
+
+#: includes/mail.php:180
+msgid "Failed to attach a file. The total file size exceeds the limit of 25 megabytes."
+msgstr "S’u arrit të bashkëngjitet një kartelë. Madhësi gjithsej e kartelës e tejkalon kufirin prej 25 megabajtesh."
+
+#. translators: %s: Attachment file path.
+#: includes/mail.php:159
+msgid "Failed to attach a file. %s is not a readable file."
+msgstr "S’u arrit të bashkëngjitet një kartelë. %s s’shpie te një kartelë e lexueshme."
+
+#. translators: %s: Attachment file path.
+#: includes/mail.php:144
+msgid "Failed to attach a file. %s is not in the allowed directory."
+msgstr "S’u arrit të bashkëngjitet një kartelë. %s s’është te drejtoria e lejuar."
+
+#: includes/contact-form-template.php:42
+msgid "Submit"
+msgstr "Parashtroje"
+
+#: includes/contact-form-template.php:37
+msgid "(optional)"
+msgstr "(opsionale)"
+
+#: admin/includes/welcome-panel.php:69
+msgid "disallowed list"
+msgstr "listë e palejuar"
+
+#: modules/disallowed-list.php:35
+msgid "Disallowed words (%s) are used."
+msgstr "Janë përdorur fjalë të palejuara (%s)."
+
+#: modules/disallowed-list.php:32
+msgid "Disallowed words are used."
+msgstr "Janë përdorur fjalë të palejuara."
+
+#: includes/contact-form-functions.php:142
+msgid "Not Found"
+msgstr "S’u Gjet"
+
+#. translators: Developer debugging message. 1: PHP function name, 2:
+#. Explanatory message, 3: Contact Form 7 version number.
+#: includes/functions.php:607
+msgid "%1$s was called incorrectly. %2$s %3$s"
+msgstr "%1$s qe thirrur pasaktësisht. %2$s %3$s"
+
+#. translators: %s: Contact Form 7 version number.
+#: includes/functions.php:599
+msgid "(This message was added in Contact Form 7 version %s.)"
+msgstr "(Ky mesazh qe shtuar te Contact Form 7 version %s.)"
+
+#: includes/special-mail-tags.php:22 includes/special-mail-tags.php:97
+#: includes/special-mail-tags.php:164 includes/special-mail-tags.php:218
+#: modules/flamingo.php:297
+msgid "The fourth parameter ($mail_tag) must be an instance of the WPCF7_MailTag class."
+msgstr "Parametri i katërt ($mail_tag) duhet të jetë një instancë e klasës WPCF7_MailTag."
+
+#. translators: time format, see https://www.php.net/date
+#: admin/includes/class-contact-forms-list-table.php:238
+msgid "g:i a"
+msgstr "g:i a"
+
+#. translators: 1: date, 2: time
+#: admin/includes/class-contact-forms-list-table.php:234
+msgid "%1$s at %2$s"
+msgstr "%1$s më %2$s"
+
+#: admin/edit-contact-form.php:197
+msgid "docs"
+msgstr "dokumentime"
+
+#. translators: 1: FAQ, 2: Docs ("FAQ & Docs")
+#: admin/edit-contact-form.php:190
+msgid "%1$s and %2$s"
+msgstr "%1$s dhe %2$s"
+
+#: admin/includes/editor.php:247
+msgid "Additional settings"
+msgstr "Rregullime shtesë"
+
+#: modules/constant-contact/service.php:311 modules/recaptcha/recaptcha.php:444
+#: modules/sendinblue/service.php:125 modules/sendinblue/service.php:133
+#: modules/stripe/service.php:142
+msgid "Error"
+msgstr "Gabim"
+
+#: includes/config-validator.php:617
+msgid "The total size of attachment files is too large."
+msgstr "Madhësia gjithsej e kartelave bashkëngjitje është shumë e madhe."
+
+#: includes/config-validator.php:426
+msgid "Unavailable HTML elements are used in the form template."
+msgstr "Te gjedhja e formularit janë përdorur elementë HTML që s’gjenden."
+
+#: modules/recaptcha/recaptcha.php:466
+msgid "reCAPTCHA is active on this site."
+msgstr "reCAPTCHA është aktive në këtë sajt."
+
+#: modules/recaptcha/recaptcha.php:123
+msgid "reCAPTCHA response token is empty."
+msgstr "Token-i i përgjigjes reCAPTCHA është i zbrazët."
+
+#: includes/submission.php:577
+msgid "Submitted nonce is invalid."
+msgstr "Nonce-i i përzgjedhur është i pavlefshëm."
+
+#: includes/submission.php:568
+msgid "User-Agent string is unnaturally short."
+msgstr "Vargu User-Agent është në mënyrë të panatyrshme i shkurtër."
+
+#: modules/recaptcha/recaptcha.php:129
+msgid "reCAPTCHA score (%1$.2f) is lower than the threshold (%2$.2f)."
+msgstr "Përfundimi nga reCAPTCHA score (%1$.2f) është më i ulët se pragu (%2$.2f)."
+
+#: modules/akismet.php:64
+msgid "Akismet returns a spam response."
+msgstr "Akismet dërgon një përgjigje <em>spam</em>."
+
+#: modules/constant-contact/service.php:410
+msgctxt "API keys"
+msgid "Reset Keys"
+msgstr "Ricaktoji Kyçet"
+
+#: modules/constant-contact/service.php:339
+msgid "This site is connected to the Constant Contact API."
+msgstr "Ky sajt është i lidhur me API-n Constant Contact."
+
+#: modules/constant-contact/service.php:318
+msgid "Configuration updated."
+msgstr "Formësimi u përditësua."
+
+#: modules/constant-contact/service.php:312
+msgid "Failed to establish connection. Please double-check your configuration."
+msgstr "S’u arrit të vendosej lidhja. Ju lutemi, rikontrolloni formësimin tuaj."
+
+#: modules/constant-contact/service.php:305
+msgid "Connection established."
+msgstr "U vendos lidhja."
+
+#. translators: 1: response code, 2: message, 3: body, 4: URL
+#: includes/functions.php:646
+msgid "HTTP Response: %1$s %2$s %3$s from %4$s"
+msgstr "Përgjigje HTTP: %1$s %2$s %3$s nga %4$s"
+
+#: modules/recaptcha/recaptcha.php:537 modules/stripe/service.php:249
+msgid "Save Changes"
+msgstr "Ruaji Ndryshimet"
+
+#: modules/recaptcha/recaptcha.php:456
+msgid "reCAPTCHA protects you against spam and other types of automated abuse. With Contact Form 7&#8217;s reCAPTCHA integration module, you can block abusive form submissions by spam bots. For details, see %s."
+msgstr "reCAPTCHA ju mbron nga mesazhe të padëshiruar dhe lloje të tjera abuzimi të automatizuar. Me modulin e integrimit reCAPTCHA nga Contact Form 7 mund të bllokoni parashtrime abuzive në formularë nga robotë spam-i. Për hollësi, shihni %s."
+
+#: modules/recaptcha/recaptcha.php:201 modules/recaptcha/recaptcha.php:459
+msgid "reCAPTCHA (v3)"
+msgstr "reCAPTCHA (v3)"
+
+#: modules/recaptcha/recaptcha.php:198
+msgid "API keys for reCAPTCHA v3 are different from those for v2; keys for v2 don&#8217;t work with the v3 API. You need to register your sites again to get new keys for v3. For details, see %s."
+msgstr "Kyçat API për reCAPTCHA v3 janë të ndryshëm nga ata për v2; kyçat për v2 s’funksionojnë me API-n v3. Për të marrë kyça të rinj për v3-shin, lypset të riregjistroni sajtet tuaj. Për hollësi, shihni %s."
+
+#: modules/constant-contact/service.php:415
+msgid "Connect to the Constant Contact API"
+msgstr "Lidhu me APIN-n Constant Contact"
+
+#: modules/recaptcha/recaptcha.php:532 modules/stripe/service.php:245
+msgctxt "API keys"
+msgid "Remove Keys"
+msgstr "Hiqi Kyçet"
+
+#: modules/constant-contact/service.php:402
+msgid "Set this URL as the redirect URI."
+msgstr "Vëre këtë URL si URI-n e ridrejtimeve."
+
+#: modules/constant-contact/service.php:395
+msgid "Redirect URI"
+msgstr "URI Ridrejtimi"
+
+#: modules/constant-contact/service.php:378
+msgid "App Secret"
+msgstr "E fshehtë Aplikacioni"
+
+#: modules/constant-contact/service.php:361
+msgid "API Key"
+msgstr "Kyç API"
+
+#: modules/constant-contact/service.php:349 modules/recaptcha/recaptcha.php:476
+#: modules/stripe/service.php:179
+msgid "Setup Integration"
+msgstr "Integrim Rregullimi"
+
+#: modules/constant-contact/contact-form-properties.php:174
+#: modules/constant-contact/service.php:332
+msgid "Constant Contact integration"
+msgstr "Integrim me Constant Contact"
+
+#: admin/includes/welcome-panel.php:156
+#: modules/constant-contact/contact-form-properties.php:173
+#: modules/constant-contact/service.php:328
+msgid "https://contactform7.com/constant-contact-integration/"
+msgstr "https://contactform7.com/constant-contact-integration/"
+
+#: modules/constant-contact/service.php:326
+msgid "The Constant Contact integration module allows you to send contact data collected through your contact forms to the Constant Contact API. You can create reliable email subscription services in a few easy steps. For details, see %s."
+msgstr "Integrimi me modulin Constant Contact ju lejon të dërgoni te API Constant Contact të dhëna kontaktesh të grumbulluara përmes formularëve tuaj të kontaktit. Mund të krijoni me pak hapa shërbime të qëndrueshëm pajtimesh me email. Për hollësi, shihni te %s."
+
+#: admin/includes/welcome-panel.php:157
+#: modules/constant-contact/contact-form-properties.php:181
+#: modules/constant-contact/contact-form-properties.php:281
+#: modules/constant-contact/service.php:101
+msgid "Constant Contact"
+msgstr "Constant Contact"
+
+#: modules/constant-contact/constant-contact.php:22
+msgid "Email marketing"
+msgstr "Marketing me email"
+
+#: includes/config-validator.php:679
+msgid "It is not allowed to use files outside the wp-content directory."
+msgstr "Nuk lejohet të përdoren kartela që s’janë pjesë e drejtorisë wp-content."
+
+#: modules/acceptance.php:275
+msgid "Make this checkbox optional"
+msgstr "Bëje opsionale këtë kutizë"
+
+#: admin/edit-contact-form.php:206
+msgid "Professional services"
+msgstr "Shërbime profesionale"
+
+#: admin/edit-contact-form.php:205
+msgid "https://contactform7.com/custom-development/"
+msgstr "https://contactform7.com/custom-development/"
+
+#: admin/edit-contact-form.php:202
+msgid "Support forums"
+msgstr "Forume asistence"
+
+#: admin/edit-contact-form.php:201
+msgid "https://wordpress.org/support/plugin/contact-form-7/"
+msgstr "https://wordpress.org/support/plugin/contact-form-7/"
+
+#: admin/edit-contact-form.php:186
+msgid "Here are some available options to help solve your problems."
+msgstr "Ja disa mundësi për t’ju ndihmuar të zgjidhni problemet tuaja."
+
+#: admin/edit-contact-form.php:184
+msgid "Do you need help?"
+msgstr "Ju duhet ndihmë?"
+
+#: modules/acceptance.php:266
+msgid "Condition"
+msgstr "Kusht"
+
+#. translators: 1: 'Consented' or 'Not consented', 2: conditions
+#: modules/acceptance.php:224
+msgctxt "mail output for acceptance checkboxes"
+msgid "%1$s: %2$s"
+msgstr "%1$s: %2$s"
+
+#: modules/acceptance.php:208
+msgid "Not consented"
+msgstr "Jo i miratuar"
+
+#: modules/acceptance.php:206
+msgid "Consented"
+msgstr "Miratuar"
+
+#: includes/submission.php:95
+msgid "Sending mail has been aborted."
+msgstr "Dërgimi i postës u ndërpre."
+
+#: admin/includes/editor.php:211
+msgid "You can edit messages used in various situations here. For details, see %s."
+msgstr "Këtu mund të përpunoni mesazhe të përdorur në situata të ndryshme. Për hollësi, shihni %s."
+
+#: admin/includes/editor.php:210
+msgid "Editing messages"
+msgstr "Përpunim mesazhesh"
+
+#: admin/includes/editor.php:209
+msgid "https://contactform7.com/editing-messages/"
+msgstr "https://contactform7.com/editing-messages/"
+
+#: admin/includes/editor.php:130
+msgid "You can edit the mail template here. For details, see %s."
+msgstr "Këtu mund të përpunoni gjedhen e postës. Për hollësi, shihni %s."
+
+#: admin/includes/editor.php:57
+msgid "You can edit the form template here. For details, see %s."
+msgstr "Këtu mund të përpunoni gjedhen e formularëve. Për hollësi, shihni %s."
+
+#: admin/includes/editor.php:56
+msgid "Editing form template"
+msgstr "Përpunim gjedheje formularësh"
+
+#: admin/includes/editor.php:55
+msgid "https://contactform7.com/editing-form-template/"
+msgstr "https://contactform7.com/editing-form-template/"
+
+#. translators: screen reader text
+#: admin/edit-contact-form.php:224
+msgid "(left and right arrow)"
+msgstr "(shigjetë majtas dhe djathtas)"
+
+#. translators: 1: ◀ ▶ dashicon, 2: screen reader text for the dashicon
+#: admin/edit-contact-form.php:219
+msgid "%1$s %2$s keys switch panels"
+msgstr "Tastet %1$s %2$s këmbejnë panelet"
+
+#. translators: screen reader text
+#: admin/admin.php:158
+msgid "(configuration error)"
+msgstr "(gabim formësimi)"
+
+#: admin/admin.php:151
+msgid "How to resolve?"
+msgstr "Si të zgjidhet?"
+
+#: admin/includes/welcome-panel.php:100
+msgid "Your donation will help encourage and support the plugin&#8217;s continued development and better user support."
+msgstr "Dhurimi juaj do të nxisë dhe mbështesë zhvillimin vazhdimisht të shtojcës dhe asistencë më të mirë për përdoruesit."
+
+#: admin/includes/welcome-panel.php:97
+msgid "making a donation"
+msgstr "bërja e një dhurimi"
+
+#. translators: %s: link labeled 'making a donation'
+#: admin/includes/welcome-panel.php:94
+msgid "If you enjoy using Contact Form 7 and find it useful, please consider %s."
+msgstr "Nëse ju pëlqen përdorimi i Contact Form 7 dhe ju duket e dobishme, ju lutemi, shihni mundësinë e %s."
+
+#: admin/includes/welcome-panel.php:91
+msgid "It is hard to continue development and support for this plugin without contributions from users like you."
+msgstr "Është e vështirë të vazhdohet zhvillimi dhe ofrimi i asistencës për këtë shtojcë pa ndihmesë nga përdorues si ju."
+
+#: includes/contact-form.php:519 includes/contact-form.php:1032
+msgid "This contact form is available only for logged in users."
+msgstr "Ky formular kontaktesh jepet vetëm për përdorues që kanë bërë hyrjen."
+
+#: includes/config-validator.php:152
+msgid "Deprecated settings are used."
+msgstr "Po përdoren rregullime të nxjerra nga përdorimi."
+
+#. translators: %s: link labeled 'Really Simple CAPTCHA'
+#: modules/really-simple-captcha.php:36
+msgid "To use CAPTCHA, you need %s plugin installed."
+msgstr "Që të përdorni CAPTCHA-n, ju duhet shtojca %s e instaluar."
+
+#: includes/rest-api.php:306
+msgid "There was an error deleting the contact form."
+msgstr "Pati një gabim gjatë fshirjes së formularit të kontakteve."
+
+#: includes/rest-api.php:66 includes/rest-api.php:82 includes/rest-api.php:98
+msgid "You are not allowed to access the requested contact form."
+msgstr "S’keni leje të hyni te formulari i kërkuar i kontakteve."
+
+#: includes/rest-api.php:230 includes/rest-api.php:252
+#: includes/rest-api.php:297 includes/rest-api.php:327
+#: includes/rest-api.php:385
+msgid "The requested contact form was not found."
+msgstr "Formulari i kërkuar i kontakteve nuk u gjet."
+
+#: includes/rest-api.php:44
+msgid "You are not allowed to create a contact form."
+msgstr "S’keni leje të krijoni një formular kontaktesh."
+
+#: includes/rest-api.php:184
+msgid "Cannot create existing contact form."
+msgstr "S’mund të krijoni formular ekzistues kontaktesh."
+
+#: includes/rest-api.php:30
+msgid "You are not allowed to access contact forms."
+msgstr "S’keni leje të hyni te formularë kontaktesh."
+
+#: includes/config-validator.php:661
+msgid "Attachment file does not exist at %path%."
+msgstr "Nuk ekziston kartelë bashkëngjitjeje në %path%."
+
+#: includes/config-validator.php:537
+msgid "Invalid mailbox syntax is used in the %name% field."
+msgstr "Në fushën %name% është përdorur sintaksë e pavlefshme kutie postare."
+
+#. translators: %names%: a list of form control names
+#: includes/config-validator.php:409
+msgid "Unavailable names (%names%) are used for form controls."
+msgstr "Për kontrolle formulari janë përdorur emra (%names%) që s’mund të kihen."
+
+#: includes/config-validator.php:150
+msgid "There are invalid mail header fields."
+msgstr "Ka fusha të pavlefshme kryesh poste."
+
+#: includes/config-validator.php:146
+msgid "HTML tags are used in a message."
+msgstr "Në një mesazh përdoren etiketa HTML."
+
+#: includes/config-validator.php:144
+msgid "Sender email address does not belong to the site domain."
+msgstr "Adresa email e dërguesit s’i përket përkatësisë së sajtit."
+
+#: includes/config-validator.php:142
+msgid "Invalid mailbox syntax is used."
+msgstr "Është përdorur sintaksë e pavlefshme kutie postare."
+
+#: includes/config-validator.php:140
+msgid "There is a possible empty field."
+msgstr "Ka mundësi të ketë një fushë të zbrazët."
+
+#. translators: %s: number of errors detected
+#: admin/includes/class-contact-forms-list-table.php:137
+msgid "%s configuration error detected"
+msgid_plural "%s configuration errors detected"
+msgstr[0] "U pikas %s gabim formësimi"
+msgstr[1] "U pikasën %s gabime formësimi"
+
+#: admin/admin.php:569 includes/rest-api.php:196 includes/rest-api.php:263
+msgid "There was an error saving the contact form."
+msgstr "Pati një gabim gjatë ruajtjes së formularit të kontakteve."
+
+#: admin/admin.php:155
+msgid "%d configuration errors detected in this tab panel"
+msgstr "Në këtë panel skede u pikasën %d gabime formësimi"
+
+#: admin/admin.php:154
+msgid "1 configuration error detected in this tab panel"
+msgstr "U pikas 1 gabim formësimi në panelin e kësaj skede"
+
+#: admin/admin.php:153
+msgid "%d configuration errors detected"
+msgstr "U pikasën %d gabime formësimi"
+
+#: admin/admin.php:152
+msgid "1 configuration error detected"
+msgstr "U pikas 1 gabim formësimi"
+
+#. translators: 1: PHP function name, 2: version number, 3: alternative
+#. function name
+#. translators: 1: WordPress hook name, 2: version number, 3: alternative hook
+#. name
+#: includes/functions.php:537 includes/functions.php:574
+msgid "%1$s is <strong>deprecated</strong> since Contact Form 7 version %2$s! Use %3$s instead."
+msgstr "%1$s është <strong>nxjerrë nga përdorimi</strong> që me Contact Form 7 version %2$s! Në vend të tij, përdorni %3$s."
+
+#: admin/includes/welcome-panel.php:126
+msgid "Flamingo"
+msgstr "Flamingo"
+
+#. translators: %s: link labeled 'Flamingo'
+#: admin/includes/welcome-panel.php:123
+msgid "Install a message storage plugin before this happens to you. %s saves all messages through contact forms into the database. Flamingo is a free WordPress plugin created by the same author as Contact Form 7."
+msgstr "Instaloni një shtojcë depozitimi mesazhesh përpara se kjo të ndodhë me ju. %s i ruan në bazën e të dhënave krejt mesazhet e formularëve të kontaktit. Flamingo është një shtojcë WordPress e lirë, nga po ai autor i Contact Form 7."
+
+#: admin/includes/welcome-panel.php:120
+msgid "Contact Form 7 doesn&#8217;t store submitted messages anywhere. Therefore, you may lose important messages forever if your mail server has issues or you make a mistake in mail configuration."
+msgstr "Contact Form 7 s’i ruan gjëkundi mesazhet e parashtruar. Ndaj, mund të humbni përgjithmonë mesazhe të rëndësishëm, nëse shërbyesi juaj i postës ka probleme ose nëse bëni ndonjë gabim te formësimi i postës."
+
+#: admin/includes/welcome-panel.php:114
+msgid "Before you cry over spilt mail&#8230;"
+msgstr "Përpara se të qaheni për postë të humbur&#8230;"
+
+#: admin/includes/welcome-panel.php:68
+msgid "https://contactform7.com/comment-blacklist/"
+msgstr "https://contactform7.com/comment-blacklist/"
+
+#. translators: links labeled 1: 'Akismet', 2: 'reCAPTCHA', 3: 'disallowed
+#. list'
+#: admin/includes/welcome-panel.php:58
+msgid "Contact Form 7 supports spam-filtering with %1$s. Intelligent %2$s blocks annoying spambots. Plus, using %3$s, you can block messages containing specified keywords or those sent from specified IP addresses."
+msgstr "Contact Form 7 mbulon filtrim mesazhesh të padëshiruar përmes %1$s. %2$s i mençur bllokon robotë bezdisës mesazhesh të padëshiruar. Plus, duke përdorur %3$s, mund të bllokoni mesazhe që përmbajnë fjalëkyçe specifikë ose ata të dërguar nga adresa IP specifike."
+
+#: admin/includes/welcome-panel.php:55
+msgid "Spammers target everything; your contact forms aren&#8217;t an exception. Before you get spammed, protect your contact forms with the powerful anti-spam features Contact Form 7 provides."
+msgstr "Dërguesit e mesazheve të padëshiruar synojnë gjithçka; formularët tuaj të kontaktit nuk përbëjnë përjashtim. Përpara se të mbuloheni me mesazhe të padëshiruar, mbrojini formularët tuaj të kontaktit me veçoritë e fuqishme që Contact Form 7 furnizon kundër tyre."
+
+#: admin/includes/welcome-panel.php:49
+msgid "Getting spammed? You have protection."
+msgstr "Po merrni mesazhe të padëshiruar? Keni mbrojtje."
+
+#: includes/config-validator.php:148
+msgid "Multiple form controls are in a single label element."
+msgstr "Në një element etikete njëshe gjenden kontrolle të shumtë formulari."
+
+#: admin/includes/config-validator.php:135
+msgid "FAQ about Configuration Validator"
+msgstr "FAQ rreth Vleftësuesit të Formësimeve"
+
+#: admin/includes/config-validator.php:134
+msgid "https://contactform7.com/configuration-validator-faq/"
+msgstr "https://contactform7.com/configuration-validator-faq/"
+
+#: modules/text.php:204
+msgid "The telephone number is invalid."
+msgstr "Numri i telefonit s’është i vlefshëm."
+
+#: modules/text.php:197
+msgid "The URL is invalid."
+msgstr "URL-ja është e pavlefshme."
+
+#: modules/text.php:190
+msgid "The e-mail address entered is invalid."
+msgstr "Adresa email e dhënë është e pavlefshme."
+
+#: modules/quiz.php:200
+msgid "The answer to the quiz is incorrect."
+msgstr "Përgjigja për pyetjen është e pasaktë."
+
+#: modules/number.php:144
+msgid "The number is larger than the maximum allowed."
+msgstr "Numri është më i madh se sa maksimumi i lejuar."
+
+#: modules/number.php:139
+msgid "The number is smaller than the minimum allowed."
+msgstr "Numri është më i vogël se sa minimumi i lejuar."
+
+#: modules/number.php:134
+msgid "The number format is invalid."
+msgstr "Formati i numrit është i pavlefshëm."
+
+#: includes/file.php:135
+msgid "There was an error uploading the file."
+msgstr "Pati një gabim gjatë ngarkimit të kartelës."
+
+#: includes/file.php:130
+msgid "The file is too big."
+msgstr "Kartela është shumë e madhe."
+
+#: includes/file.php:125
+msgid "You are not allowed to upload files of this type."
+msgstr "S’keni leje të ngarkoni kartela të këtij lloji."
+
+#: includes/file.php:120
+msgid "There was an unknown error uploading the file."
+msgstr "Pati një gabim të panjohur gjatë ngarkimit të kartelës."
+
+#: modules/date.php:152
+msgid "The date is after the latest one allowed."
+msgstr "Data bie pas më të vonshmes të lejuar."
+
+#: modules/date.php:147
+msgid "The date is before the earliest one allowed."
+msgstr "Data bie para më të hershmes të lejuar."
+
+#: modules/date.php:142
+msgid "The date format is incorrect."
+msgstr "Formati i datës është i pasaktë."
+
+#: includes/contact-form-template.php:213
+msgid "The field is too short."
+msgstr "Fusha është shumë e shkurtër."
+
+#: includes/contact-form-template.php:206
+msgid "The field is too long."
+msgstr "Fusha është shumë e gjatë."
+
+#: includes/contact-form-template.php:199
+msgid "The field is required."
+msgstr "Fusha është e domosdoshme."
+
+#: includes/contact-form-template.php:192
+msgid "You must accept the terms and conditions before sending your message."
+msgstr "Përpara se të dërgohet mesazhi juaj, duhet të pranoni termat dhe kushtet."
+
+#: includes/contact-form-template.php:178
+msgid "One or more fields have an error. Please check and try again."
+msgstr "Një ose më tepër fusha kanë një gabim. Ju lutemi, kontrolloji dhe riprovoni."
+
+#: includes/contact-form-template.php:171
+#: includes/contact-form-template.php:185
+msgid "There was an error trying to send your message. Please try again later."
+msgstr "Pati një gabim teksa provohej të dërgohej mesazhi juaj. Ju lutemi, riprovoni më vonë."
+
+#: includes/contact-form-template.php:164
+msgid "Thank you for your message. It has been sent."
+msgstr "Faleminderit për mesazhin tuaj. U dërgua."
+
+#. translators: 1: blog name, 2: [your-subject]
+#: includes/contact-form-template.php:52 includes/contact-form-template.php:96
+msgctxt "mail subject"
+msgid "%1$s \"%2$s\""
+msgstr "%1$s \"%2$s\""
+
+#: admin/includes/config-validator.php:48
+msgid "Misconfiguration leads to mail delivery failure or other troubles. Validate your contact forms now."
+msgstr "Formësimi i gabuar shpie në dështim dërgimi poste ose belara të tjera. Kontrolloni vlefshmërinë e formularëve tuaj të kontaktit tani."
+
+#: admin/includes/config-validator.php:45
+msgid "Validate Contact Form 7 Configuration"
+msgstr "Kontrolloni Vlefshmëri Formësimi të Contact Form 7"
+
+#: includes/config-validator.php:23
+msgid "https://contactform7.com/configuration-errors/"
+msgstr "https://contactform7.com/configuration-errors/"
+
+#: admin/admin.php:600
+msgid "Configuration validation completed. No invalid contact form was found."
+msgstr "Vleftësimi i formësimeve u plotësua. S’u gjet ndonjë formular kontaktesh i pavlefshëm."
+
+#. translators: %s: number of contact forms
+#: admin/admin.php:586
+msgid "Configuration validation completed. %s invalid contact form was found."
+msgid_plural "Configuration validation completed. %s invalid contact forms were found."
+msgstr[0] "Vleftësimi i formësimeve u plotësua. U gjet %s formular kontaktesh i pavlefshëm."
+msgstr[1] "Vleftësimi i formësimeve u plotësua. U gjetën %s formularë kontaktesh të pavlefshëm."
+
+#: admin/includes/config-validator.php:124
+msgid "Validate Configuration"
+msgstr "Kontrolloni Vlefshmërinë e Formësimit"
+
+#. translators: %s: number of contact forms
+#: admin/includes/config-validator.php:112
+msgid "Validate %s contact form now"
+msgid_plural "Validate %s contact forms now"
+msgstr[0] "Kontrolloni vlefshmërinë e %s formulari kontaktesh tani"
+msgstr[1] "Kontrolloni vlefshmërinë e %s formularësh kontaktesh tani"
+
+#: admin/includes/config-validator.php:70
+msgid "You are not allowed to validate configuration."
+msgstr "S’keni leje të vleftësoni formësimin."
+
+#: admin/includes/welcome-panel.php:64 admin/includes/welcome-panel.php:164
+#: modules/recaptcha/recaptcha.php:200 modules/recaptcha/recaptcha.php:458
+msgid "https://contactform7.com/recaptcha/"
+msgstr "https://contactform7.com/recaptcha/"
+
+#: modules/recaptcha/recaptcha.php:508 modules/stripe/service.php:224
+msgid "Secret Key"
+msgstr "Kyç i Fshehtë"
+
+#: modules/recaptcha/recaptcha.php:491
+msgid "Site Key"
+msgstr "Kyç Sajti"
+
+#: modules/recaptcha/recaptcha.php:450 modules/sendinblue/service.php:141
+#: modules/stripe/service.php:150
+msgid "Settings saved."
+msgstr "Rregullimet u ruajtën."
+
+#: modules/recaptcha/recaptcha.php:445 modules/sendinblue/service.php:134
+#: modules/stripe/service.php:143
+msgid "Invalid key values."
+msgstr "Vlera të pavlefshme kyçi."
+
+#: admin/includes/welcome-panel.php:65 admin/includes/welcome-panel.php:165
+#: modules/recaptcha/recaptcha.php:234
+msgid "reCAPTCHA"
+msgstr "reCAPTCHA"
+
+#: modules/really-simple-captcha.php:256
+msgid "CAPTCHA (Really Simple CAPTCHA)"
+msgstr "CAPTCHA (Really Simple CAPTCHA)"
+
+#. Author URI of the plugin
+msgid "https://ideasilo.wordpress.com/"
+msgstr "https://ideasilo.wordpress.com/"
+
+#. Author of the plugin
+msgid "Takayuki Miyoshi"
+msgstr "Takayuki Miyoshi"
+
+#. Description of the plugin
+msgid "Just another contact form plugin. Simple but flexible."
+msgstr "Edhe një tjetër shtojcë për formular kontaktesh. E thjeshtë, por e zhdërvjellët."
+
+#. Plugin URI of the plugin
+msgid "https://contactform7.com/"
+msgstr "https://contactform7.com/"
+
+#. translators: title of your first contact form. %d: number fixed to '1'
+#: load.php:184
+msgid "Contact form %d"
+msgstr "Formular kontaktesh %d"
+
+#: modules/textarea.php:150
+msgid "Generate a form-tag for a multi-line text input field. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një fushë dhënieje teksti me shumë rreshta. Për më tepër hollësi, shihni %s."
+
+#: modules/textarea.php:142
+msgid "text area"
+msgstr "fushë tekstesh"
+
+#: modules/text.php:296
+msgid "This field requires author's URL"
+msgstr "Kjo fushë lyp URL-në e autorit"
+
+#: modules/text.php:291
+msgid "This field requires author's email address"
+msgstr "Kjo fushë lyp adresën email të autorit"
+
+#: modules/text.php:286
+msgid "This field requires author's name"
+msgstr "Kjo fushë lyp emrin e autorit"
+
+#: admin/includes/welcome-panel.php:61 modules/text.php:278
+#: modules/text.php:281
+msgid "Akismet"
+msgstr "Akismet"
+
+#: modules/text.php:246 modules/textarea.php:152
+msgid "Text fields"
+msgstr "Fusha tektesh"
+
+#: modules/text.php:246 modules/textarea.php:152
+msgid "https://contactform7.com/text-fields/"
+msgstr "https://contactform7.com/text-fields/"
+
+#: modules/text.php:243
+msgid "Generate a form-tag for a single-line telephone number input field. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një fushë dhënieje numrash telefoni me një rresht. Për më tepër hollësi, shihni %s."
+
+#: modules/text.php:241
+msgid "Generate a form-tag for a single-line URL input field. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një fushë dhënieje URL-sh me një rresht. Për më tepër hollësi, shihni %s."
+
+#: modules/text.php:239
+msgid "Generate a form-tag for a single-line email address input field. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një fushë dhënieje adrese email me një rresht. Për më tepër hollësi, shihni %s."
+
+#: modules/text.php:237
+msgid "Generate a form-tag for a single-line plain text input field. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një fushë dhënieje teksti të thjeshtë me një rresht. Për më tepër hollësi, shihni %s."
+
+#: modules/text.php:224
+msgid "tel"
+msgstr "tel"
+
+#: modules/text.php:222
+msgid "URL"
+msgstr "URL"
+
+#: modules/text.php:220
+msgid "email"
+msgstr "email"
+
+#: modules/text.php:218
+msgid "text"
+msgstr "tekst"
+
+#: modules/text.php:202
+msgid "Telephone number that the sender entered is invalid"
+msgstr "Numri i telefonit që dha dërguesi është i pavlefshëm"
+
+#: modules/text.php:195
+msgid "URL that the sender entered is invalid"
+msgstr "URL-ja që dha dërguesi është e pavlefshme"
+
+#: modules/text.php:188
+msgid "Email address that the sender entered is invalid"
+msgstr "Adresa email që dha dërguesi është e pavlefshme"
+
+#: modules/submit.php:65
+msgid "Label"
+msgstr "Etiketë"
+
+#: modules/submit.php:55
+msgid "Submit button"
+msgstr "Buton parashtrimesh"
+
+#: modules/submit.php:55
+msgid "https://contactform7.com/submit-button/"
+msgstr "https://contactform7.com/submit-button/"
+
+#: modules/submit.php:53
+msgid "Generate a form-tag for a submit button. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një buton parashtrimesh. Për më tepër hollësi, shihni %s."
+
+#: modules/submit.php:46
+msgid "submit"
+msgstr "parashtroje"
+
+#: modules/select.php:204
+msgid "Insert a blank item as the first option"
+msgstr "Futni një element të zbrazët, si mundësia e parë"
+
+#: modules/select.php:203
+msgid "Allow multiple selections"
+msgstr "Lejo përzgjedhje shumëfishe"
+
+#: modules/select.php:170
+msgid "Generate a form-tag for a drop-down menu. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një menu hapmbyll. Për më tepër hollësi, shihni %s."
+
+#: modules/select.php:163
+msgid "drop-down menu"
+msgstr "menu hap-mbyll"
+
+#: modules/quiz.php:244
+msgid "One pipe-separated question-answer pair (e.g. The capital of Brazil?|Rio) per line."
+msgstr "Një çift pyetje-përgjigje ndarë me vijën vertikale (p.sh. Kryeqyteti i Francës?|Parisi) për rresht."
+
+#: modules/quiz.php:239 modules/quiz.php:242
+msgid "Questions and answers"
+msgstr "Pyetje dhe përgjigje"
+
+#: modules/quiz.php:224
+msgid "Quiz"
+msgstr "Pyetje"
+
+#: modules/quiz.php:224
+msgid "https://contactform7.com/quiz/"
+msgstr "https://contactform7.com/quiz/"
+
+#: modules/quiz.php:222
+msgid "Generate a form-tag for a question-answer pair. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për çifte pyetje-përgjigje. Për më tepër hollësi, shihni %s."
+
+#: modules/quiz.php:214
+msgid "quiz"
+msgstr "pyetje"
+
+#: modules/quiz.php:198
+msgid "Sender doesn't enter the correct answer to the quiz"
+msgstr "Dërguesi s’jep përgjigjen e saktë për pyetjen"
+
+#: modules/number.php:182
+msgid "Slider"
+msgstr "Rrëshqitës"
+
+#: modules/number.php:181
+msgid "Spinbox"
+msgstr "Kutizë vlerash"
+
+#: modules/number.php:166
+msgid "Number fields"
+msgstr "Fusha numrash"
+
+#: modules/number.php:166
+msgid "https://contactform7.com/number-fields/"
+msgstr "https://contactform7.com/number-fields/"
+
+#: modules/number.php:164
+msgid "Generate a form-tag for a field for numeric value input. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një fushë dhënieje vlere numerike. Për më tepër hollësi, shihni %s."
+
+#: modules/number.php:156
+msgid "number"
+msgstr "numër"
+
+#: modules/number.php:143
+msgid "Number is larger than maximum limit"
+msgstr "Numri është më i madh se sa kufiri maksimum"
+
+#: modules/number.php:138
+msgid "Number is smaller than minimum limit"
+msgstr "Numri është më i vogël se sa kufiri minimum"
+
+#: modules/number.php:133
+msgid "Number format that the sender entered is invalid"
+msgstr "Formati i numrave që dha dërguesi është i pavlefshëm"
+
+#. translators: %s: the path of the temporary folder
+#: includes/file.php:395
+msgid "This contact form has file uploading fields, but the temporary folder for the files (%s) does not exist or is not writable. You can create the folder or change its permission manually."
+msgstr "Ky formular kontaktesh përmban fusha ngarkimi kartelash, por dosja e përkohshme për kartelat (%s) s’ekziston ose s’është e shkrueshme. Mund të krijoni dosjen ose të ndryshoni lejet për të dorazi."
+
+#: modules/file.php:182
+msgid "To attach the file uploaded through this field to mail, you need to insert the corresponding mail-tag (%s) into the File Attachments field on the Mail tab."
+msgstr "Për të bashkëngjitur te posta kartelën e ngarkuar përmes kësaj fushe, lypset të futni etiketën përkatëse për postë (%s) te fusha Bashkëngjitje Kartelash te skeda Postë."
+
+#: modules/file.php:154
+msgid "Acceptable file types"
+msgstr "Lloje të pranueshëm kartelash"
+
+#: modules/file.php:149
+msgid "File size limit (bytes)"
+msgstr "Kufi madhësie kartele (në bajte)"
+
+#: modules/file.php:124
+msgid "File uploading and attachment"
+msgstr "Ngarkim kartelash dhe bashkëngjitje"
+
+#: modules/file.php:124
+msgid "https://contactform7.com/file-uploading-and-attachment/"
+msgstr "https://contactform7.com/file-uploading-and-attachment/"
+
+#: modules/file.php:122
+msgid "Generate a form-tag for a file uploading field. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një fushë ngarkimi kartelash. Për më tepër hollësi, shihni %s."
+
+#: modules/file.php:114
+msgid "file"
+msgstr "kartelë"
+
+#: includes/file.php:134
+msgid "Uploading a file fails for PHP error"
+msgstr "Ngarkimi i një kartele dështon për shkak të një gabimi PHP"
+
+#: includes/file.php:129
+msgid "Uploaded file is too large"
+msgstr "Kartela e ngarkuar është shumë e madhe"
+
+#: includes/file.php:124
+msgid "Uploaded file is not allowed for file type"
+msgstr "Kartela e ngarkuar s’ lejohet për llojin e kartelave"
+
+#: includes/file.php:119
+msgid "Uploading a file fails for any reason"
+msgstr "Ngarkimi i një kartele dështon për çfarëdo arsyeje"
+
+#: modules/date.php:215 modules/number.php:212
+msgid "Max"
+msgstr "Maks."
+
+#: modules/date.php:210 modules/number.php:207
+msgid "Min"
+msgstr "Min."
+
+#: modules/date.php:205 modules/date.php:208 modules/number.php:202
+#: modules/number.php:205
+msgid "Range"
+msgstr "Interval"
+
+#: modules/date.php:201 modules/number.php:198 modules/text.php:273
+#: modules/textarea.php:179
+msgid "Use this text as the placeholder of the field"
+msgstr "Përdoreni këtë tekst si vend-mbajtëse për fushën"
+
+#: modules/date.php:199 modules/number.php:196 modules/text.php:271
+#: modules/textarea.php:177
+msgid "Default value"
+msgstr "Vlerë parazgjedhje"
+
+#: modules/date.php:174
+msgid "Date field"
+msgstr "Fushë datash"
+
+#: modules/date.php:174
+msgid "https://contactform7.com/date-field/"
+msgstr "https://contactform7.com/date-field/"
+
+#: modules/date.php:172
+msgid "Generate a form-tag for a date input field. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një fushë dhënieje datash. Për më tepër hollësi, shihni %s."
+
+#: modules/date.php:164
+msgid "date"
+msgstr "datë"
+
+#: modules/date.php:151
+msgid "Date is later than maximum limit"
+msgstr "Data bie më vonë se kufiri maksimum"
+
+#: modules/date.php:146
+msgid "Date is earlier than minimum limit"
+msgstr "Data bie më herët se kufiri minimum"
+
+#: modules/date.php:141
+msgid "Date format that the sender entered is invalid"
+msgstr "Formati i datave që dha dërguesi është i pavlefshëm"
+
+#: modules/checkbox.php:301 modules/date.php:245 modules/number.php:242
+#: modules/select.php:233 modules/text.php:329 modules/textarea.php:206
+msgid "To use the value input through this field in a mail field, you need to insert the corresponding mail-tag (%s) into the field on the Mail tab."
+msgstr "Që të përdoret në një fushë poste vlera e dhënë përmes kësaj fushe, lypset të futni etiketën përkatëse për postë (%s) te fusha në skedën Postë."
+
+#: modules/checkbox.php:271
+msgid "Make checkboxes exclusive"
+msgstr "Kutizat bëji ekskluzive"
+
+#: modules/checkbox.php:269
+msgid "Wrap each item with label element"
+msgstr "Mbështille çdo objekt me element etikete"
+
+#: modules/checkbox.php:268
+msgid "Put a label first, a checkbox last"
+msgstr "Vendosni së pari një etiketë, një kutizë në fund"
+
+#: modules/checkbox.php:267 modules/select.php:202
+msgid "One option per line."
+msgstr "Një mundësi për rresht."
+
+#: modules/checkbox.php:250 modules/date.php:188 modules/file.php:138
+#: modules/number.php:185 modules/select.php:186 modules/text.php:260
+#: modules/textarea.php:166
+msgid "Required field"
+msgstr "Fushë e domosdoshme"
+
+#: modules/checkbox.php:246 modules/checkbox.php:249 modules/date.php:184
+#: modules/date.php:187 modules/file.php:134 modules/file.php:137
+#: modules/number.php:176 modules/number.php:179 modules/select.php:182
+#: modules/select.php:185 modules/text.php:256 modules/text.php:259
+#: modules/textarea.php:162 modules/textarea.php:165
+msgid "Field type"
+msgstr "Lloj fushe"
+
+#: modules/checkbox.php:235 modules/select.php:172
+msgid "Checkboxes, radio buttons and menus"
+msgstr "Kutiza, butona rrethorë dhe menu"
+
+#: modules/checkbox.php:235 modules/select.php:172
+msgid "https://contactform7.com/checkboxes-radio-buttons-and-menus/"
+msgstr "https://contactform7.com/checkboxes-radio-buttons-and-menus/"
+
+#: modules/checkbox.php:232
+msgid "Generate a form-tag for a group of radio buttons. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një grup butonash rrethorë. Për më tepër hollësi, shihni %s."
+
+#: modules/checkbox.php:230
+msgid "Generate a form-tag for a group of checkboxes. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një grup kutizash. Për më tepër hollësi, shihni %s."
+
+#: modules/checkbox.php:217
+msgid "radio buttons"
+msgstr "butona rrethorë"
+
+#: modules/checkbox.php:215
+msgid "checkboxes"
+msgstr "kutiza"
+
+#: modules/really-simple-captcha.php:377
+msgid "This contact form contains CAPTCHA fields, but the necessary libraries (GD and FreeType) are not available on your server."
+msgstr "Ky formular kontaktesh përmban fusha CAPTCHA, por libraritë e nevojshme (GD dhe FreeType) nuk gjenden në shërbyesin tuaj."
+
+#: modules/really-simple-captcha.php:370
+msgid "This contact form contains CAPTCHA fields, but the temporary folder for the files (%s) does not exist or is not writable. You can create the folder or change its permission manually."
+msgstr "Ky formular kontaktesh përmban fusha CAPTCHA, por dosja e përkohshme për kartelat (%s) nuk ekziston ose s’është e shkrueshme. Mund të krijoni dosjen ose të ndryshoni lejet mbi të dorazi."
+
+#: modules/really-simple-captcha.php:315
+msgid "Input field settings"
+msgstr "Rregullime fushe input-i"
+
+#: modules/really-simple-captcha.php:300
+msgid "Image settings"
+msgstr "Rregullime për figurat"
+
+#: modules/really-simple-captcha.php:283
+msgid "https://contactform7.com/captcha/"
+msgstr "https://contactform7.com/captcha/"
+
+#: modules/really-simple-captcha.php:281
+msgid "Generate form-tags for a CAPTCHA image and corresponding response input field. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një figurë CAPTCHA dhe për fushën përkatëse të dhënies së përgjigjes. Për më tepër hollësi, shihni %s."
+
+#. translators: %s: link labeled 'Really Simple CAPTCHA'
+#: modules/really-simple-captcha.php:270
+msgid "To use CAPTCHA, you first need to install and activate %s plugin."
+msgstr "Që të përdorni CAPTCHA-n, së pari lypset të instaloni dhe aktivizoni shtojcën %s."
+
+#: modules/really-simple-captcha.php:283 modules/recaptcha/recaptcha.php:9
+msgid "CAPTCHA"
+msgstr "CAPTCHA"
+
+#: modules/really-simple-captcha.php:237
+msgid "Your entered code is incorrect."
+msgstr "Kodi që dhatë është i pasaktë."
+
+#: modules/really-simple-captcha.php:235
+msgid "The code that sender entered does not match the CAPTCHA"
+msgstr "Kodi që dërguesi dha s’përputhet me CAPTCHA-n"
+
+#: modules/acceptance.php:299 modules/checkbox.php:296 modules/date.php:240
+#: modules/file.php:177 modules/number.php:237 modules/quiz.php:268
+#: modules/really-simple-captcha.php:335 modules/select.php:228
+#: modules/submit.php:88 modules/text.php:324 modules/textarea.php:201
+msgid "Insert Tag"
+msgstr "Futni Etiketë"
+
+#: modules/acceptance.php:286 modules/checkbox.php:283 modules/date.php:228
+#: modules/file.php:164 modules/number.php:225 modules/quiz.php:255
+#: modules/really-simple-captcha.php:308 modules/really-simple-captcha.php:323
+#: modules/select.php:215 modules/submit.php:75 modules/text.php:311
+#: modules/textarea.php:188
+msgid "Class attribute"
+msgstr "Atribut klase"
+
+#: modules/acceptance.php:281 modules/checkbox.php:278 modules/date.php:223
+#: modules/file.php:159 modules/number.php:220 modules/quiz.php:250
+#: modules/really-simple-captcha.php:303 modules/really-simple-captcha.php:318
+#: modules/select.php:210 modules/submit.php:70 modules/text.php:306
+#: modules/textarea.php:183
+msgid "Id attribute"
+msgstr "Atribut ID-je"
+
+#: modules/acceptance.php:271 modules/acceptance.php:274
+#: modules/checkbox.php:262 modules/checkbox.php:265 modules/select.php:197
+#: modules/select.php:200
+msgid "Options"
+msgstr "Mundësi"
+
+#: modules/acceptance.php:261 modules/checkbox.php:257 modules/date.php:194
+#: modules/file.php:144 modules/number.php:191 modules/quiz.php:234
+#: modules/really-simple-captcha.php:293 modules/select.php:192
+#: modules/text.php:266 modules/textarea.php:172
+msgid "Name"
+msgstr "Emër"
+
+#: modules/acceptance.php:251
+msgid "Acceptance checkbox"
+msgstr "Kutizë pranimi"
+
+#: modules/acceptance.php:251
+msgid "https://contactform7.com/acceptance-checkbox/"
+msgstr "https://contactform7.com/acceptance-checkbox/"
+
+#: modules/acceptance.php:249
+msgid "Generate a form-tag for an acceptance checkbox. For more details, see %s."
+msgstr "Prodhoni një etiketë formulari për një kutizë pranimi. Për më tepër hollësi, shihni %s."
+
+#: modules/acceptance.php:241
+msgid "acceptance"
+msgstr "pranim"
+
+#: includes/contact-form.php:221
+msgid "<code>%1$s</code> property of a <code>WPCF7_ContactForm</code> object is <strong>no longer accessible</strong>. Use <code>%2$s</code> method instead."
+msgstr "<code>%1$s</code> pronësi e një objekti <code>WPCF7_ContactForm</code> s’është <strong>më i përdorshëm</strong>. Në vend të kësaj, përdorni metodën <code>%2$s</code>."
+
+#: includes/contact-form.php:110 includes/contact-form.php:428
+msgid "Untitled"
+msgstr "Pa Titull"
+
+#: includes/contact-form.php:48
+msgid "Contact Form"
+msgstr "Formular Kontaktesh"
+
+#: includes/contact-form-template.php:211
+msgid "There is a field with input that is shorter than the minimum allowed length"
+msgstr "Ka një fushë me vlerë që është më e shkurtër se sa gjatësia minimum e lejuar"
+
+#: includes/contact-form-template.php:204
+msgid "There is a field with input that is longer than the maximum allowed length"
+msgstr "Ka një fushë me vlerë që është më e gjatë se sa gjatësia minimum e lejuar"
+
+#: includes/contact-form-template.php:197
+msgid "There is a field that the sender must fill in"
+msgstr "Ka një fushë që dërguesi duhet ta plotësojë"
+
+#: includes/contact-form-template.php:190
+msgid "There are terms that the sender must accept"
+msgstr "Ka kushte që dërguesi duhet t’i pranojë"
+
+#: includes/contact-form-template.php:183
+msgid "Submission was referred to as spam"
+msgstr "Parashtrimi u njoftua si mesazh hedhurinë"
+
+#: includes/contact-form-template.php:176
+msgid "Validation errors occurred"
+msgstr "Pati gabime vleftësim"
+
+#: includes/contact-form-template.php:169
+msgid "Sender's message failed to send"
+msgstr "Dështoi dërgimi i mesazhit të dërguesit"
+
+#: includes/contact-form-template.php:162
+msgid "Sender's message was sent successfully"
+msgstr "Mesazhi i dërguesit u dërgua me sukses"
+
+#. translators: 1: blog name, 2: blog URL
+#: includes/contact-form-template.php:77 includes/contact-form-template.php:111
+msgid "This e-mail was sent from a contact form on %1$s (%2$s)"
+msgstr "Ky email u dërgua nga formulari i kontakteve në %1$s*%2$s)"
+
+#: includes/contact-form-template.php:72 includes/contact-form-template.php:106
+msgid "Message Body:"
+msgstr "Lëndë Mesazhi:"
+
+#. translators: %s: [your-subject]
+#: includes/contact-form-template.php:69
+msgid "Subject: %s"
+msgstr "Subjekt: %s"
+
+#. translators: %s: [your-name] <[your-email]>
+#: includes/contact-form-template.php:64
+msgid "From: %s"
+msgstr "Nga: %s"
+
+#: modules/submit.php:26
+msgid "Send"
+msgstr "Dërgoje"
+
+#: includes/contact-form-template.php:41
+msgid "Your message"
+msgstr "Mesazhi juaj"
+
+#: includes/contact-form-template.php:39
+msgid "Your email"
+msgstr "Email-i juaj"
+
+#: includes/contact-form-template.php:38
+msgid "Your name"
+msgstr "Emri juaj"
+
+#. translators: %s: title of form-tag like 'email' or 'checkboxes'
+#: admin/includes/tag-generator.php:46
+msgid "Form-tag Generator: %s"
+msgstr "Prodhues etiketash formulari: %s"
+
+#: admin/includes/help-tabs.php:91
+msgid "For more information:"
+msgstr "Për më tepër të dhëna:"
+
+#: admin/includes/help-tabs.php:83
+msgid "Any information you provide will not be shared with service providers without your authorization."
+msgstr "Çfarëdo të dhënash që furnizoni nuk do t’u jepen furnizuesve të shërbimit pa autorizimin tuaj."
+
+#: admin/includes/help-tabs.php:82
+msgid "You may need to first sign up for an account with the service that you plan to use. When you do so, you would need to authorize Contact Form 7 to access the service with your account."
+msgstr "Së pari lypset të regjistroheni për një llogari me shërbimin që planifikoni të përdorni. Kur të bëni këtë, lypset të autorizoni Contact Form 7 të përdorë shërbimin me llogarinë tuaj."
+
+#: admin/includes/help-tabs.php:81
+msgid "On this screen, you can manage services that are available through Contact Form 7. Using API will allow you to collaborate with any services that are available."
+msgstr "Në këtë skenë mund të administroni shërbime që janë të përdorshëm përmes Contact Form 7. Përdorimi i API-t do t’ju lejojë të bashkëpunoni me çfarëdo shërbimi që është i passhëm."
+
+#: admin/includes/help-tabs.php:79
+msgid "There are also special mail-tags that have specific names, but don&#8217;t have corresponding form-tags. They are used to represent meta information of form submissions like the submitter&#8217;s IP address or the URL of the page."
+msgstr "Ka edhe etiketa speciale poste që kanë emra specifikë, por që s’kanë etiketa formulari përkatëse. Ato përdoren për të përfaqësuar të dhëna meta parashtrimesh në formular, të tilla si adresa IP e parashtruesit ose URL-ja e faqes."
+
+#: admin/includes/help-tabs.php:78
+msgid "A mail-tag is also a short code enclosed in square brackets that you can use in every Mail and Mail (2) field. A mail-tag represents a user input value through an input field of a corresponding form-tag."
+msgstr "Etiketat e postës janë kode të shkurtër të mbyllur brenda kllapash katrore, që mund t’i përdorni në çdo fushë Postë dhe Postë (2). Një etiketë poste përfaqëson një vlerë që jepet nga përdoruesi përmes një fushe dhëniesh të një etikete formulari përkatëse."
+
+#: admin/includes/help-tabs.php:76
+msgid "While form-tags have a comparatively complex syntax, you don&#8217;t need to know the syntax to add form-tags because you can use the straightforward tag generator (<strong>Generate Tag</strong> button on this screen)."
+msgstr "Edhe pse etiketat e formularit kanë sintaksë deri diku të ndërlikuar, s’keni nevojë të njihni sintaksën që të shtoni etiketa formulari, ngaqë mund të përdorni drejtpërdrejt prodhuesin e etiketave (butoni <strong>Prodho Etiketë</strong> në këtë skenë)."
+
+#: admin/includes/help-tabs.php:75
+msgid "A form-tag is a short code enclosed in square brackets used in a form content. A form-tag generally represents an input field, and its components can be separated into four parts: type, name, options, and values. Contact Form 7 supports several types of form-tags including text fields, number fields, date fields, checkboxes, radio buttons, menus, file-uploading fields, CAPTCHAs, and quiz fields."
+msgstr "Etiketat e formularit janë kode të shkurtër të mbyllur brenda kllapash katrore, të përdorura në lëndë formulari. Një etiketë formulari përgjithësisht përfaqëson një fushë dhëniesh, dhe përbërësit e saj mund të ndahen në katër pjesë: lloj, emër, mundësi, dhe vlera. Contact Form 7 mbulon disa lloje etiketash formulari, përfshi fusha teksti, fusha numrash, fusha datash, kutiza, butona rrethorë, menu, fusha ngarkimi kartelash, CAPTCHAs, dhe fusha pyetjesh."
+
+#: admin/includes/help-tabs.php:73
+msgid "<strong>Additional Settings</strong> provides a place where you can customize the behavior of this contact form by adding code snippets."
+msgstr "<strong>Rregullimet Shtesë</strong> ofrojnë një vend ku mund të përshtatni sjelljen e këtij formulari kontaktesh përmes shtimi copëzash kodi."
+
+#: admin/includes/help-tabs.php:72
+msgid "In <strong>Messages</strong>, you can edit various types of messages used for this contact form. These messages are relatively short messages, like a validation error message you see when you leave a required field blank."
+msgstr "Te <strong>Mesazhet</strong>, mund të përpunoni lloje të ndryshëm mesazhesh për këtë formular kontaktesh. Këto mesazhe janë relativisht mesazhe të shkurtër, b.f. një mesazh gabimi vleftësimi që shihni kur lini të zbrazët një fushë të domosdoshme."
+
+#: admin/includes/help-tabs.php:71
+msgid "<strong>Mail (2)</strong> is an additional mail template that works similar to Mail. Mail (2) is different in that it is sent only when Mail has been sent successfully."
+msgstr "<strong>Mail (2)</strong> është një gjedhe poste shtesë që funksionon në mënyrë të ngjashme me Mail. Mail (2) ndryshon në faktin që dërgohet vetëm kur Mail është dërguar me sukses."
+
+#: admin/includes/help-tabs.php:70
+msgid "<strong>Mail</strong> manages a mail template (headers and message body) that this contact form will send when users submit it. You can use Contact Form 7&#8217;s mail-tags here."
+msgstr "<strong>Mail</strong> përfaqëson një gjedhe poste (krye dhe lëndë mesazhi) që ky formular kontaktesh do të dërgojë kur përdoruesit e parashtrojnë. Këtu mund të përdorni etiketa poste nga Contact Form 7."
+
+#: admin/includes/help-tabs.php:69
+msgid "<strong>Form</strong> is a content of HTML form. You can use arbitrary HTML, which is allowed inside a form element. You can also use Contact Form 7&#8217;s form-tags here."
+msgstr "<strong>Formulari</strong> përfaqëson lëndën e një formulari HTML. Mund të përdorni ç’HTML të doni, prej atyre që lejohen brenda një elementi formularësh. Këtu mund të përdorni edhe etiketa poste nga Contact Form 7."
+
+#: admin/includes/help-tabs.php:68
+msgid "<strong>Title</strong> is the title of a contact form. This title is only used for labeling a contact form, and can be edited."
+msgstr "<strong>Titulli</strong> përfaqëson titullin e një formulari kontaktesh. Ky titull përdoret vetëm si emër për formularin e kontaktit, dhe mund të ndryshohet."
+
+#: admin/includes/help-tabs.php:67
+msgid "On this screen, you can edit a contact form. A contact form is comprised of the following components:"
+msgstr "Në këtë skenë, mund të përpunoni një formular kontaktesh. Një formular kontaktesh përbëhet nga përbërësit vijues:"
+
+#: admin/includes/help-tabs.php:65
+msgid "<strong>Duplicate</strong> - Clones that contact form. A cloned contact form inherits all content from the original, but has a different ID."
+msgstr "<strong>Përsëdyte</strong> - E klonon atë formular kontaktesh. Një formular kontaktesh i klonuar trashëgon krejt lëndën e origjinalit, por ka tjetër ID."
+
+#: admin/includes/help-tabs.php:64
+msgid "<strong>Edit</strong> - Navigates to the editing screen for that contact form. You can also reach that screen by clicking on the contact form title."
+msgstr "<strong>Përpunojeni</strong> - Ju lëviz nëpër skenën e përpunimit të atij formulari kontaktesh. Në atë skenë mund të kaloni edhe duke klikuar mbi titullin e formularit të kontakteve."
+
+#: admin/includes/help-tabs.php:63
+msgid "Hovering over a row in the contact forms list will display action links that allow you to manage your contact form. You can perform the following actions:"
+msgstr "Kalimi i kursorit përsipër listës së formularit të kontakteve do sjellë shfaqje lidhjesh veprimesh që ju lejojnë të administroni formularin tuaj të kontakteve. Mund të kryeni veprimet vijuese:"
+
+#: admin/includes/help-tabs.php:61
+msgid "On this screen, you can manage contact forms provided by Contact Form 7. You can manage an unlimited number of contact forms. Each contact form has a unique ID and Contact Form 7 shortcode ([contact-form-7 ...]). To insert a contact form into a post or a text widget, insert the shortcode into the target."
+msgstr "Në këtë skenë, mund të administroni formularë kontaktesh të prodhuar nga Contact Form 7. Mund të administroni një numër të pakufizuar formularësh kontaktesh. Çdo formular kontaktesh ka një ID unike dhe një kod të shkurtër Contact Form 7 ([contact-form-7 ...]). Që të futni një formular kontaktesh në një postim apo një widget tekstesh, futeni kodin e shkurtër te objekti i synuar."
+
+#: admin/includes/help-tabs.php:40
+msgid "Mail-tags"
+msgstr "Etiketa poste"
+
+#: admin/includes/help-tabs.php:35
+msgid "Form-tags"
+msgstr "Etiketa formularësh"
+
+#: admin/includes/help-tabs.php:21
+msgid "Available Actions"
+msgstr "Veprime të Mundshme"
+
+#: admin/includes/help-tabs.php:16 admin/includes/help-tabs.php:30
+#: admin/includes/help-tabs.php:49
+msgid "Overview"
+msgstr "Përmbledhje"
+
+#: admin/includes/editor.php:248
+msgid "You can add customization code snippets here. For details, see %s."
+msgstr "Këtu mund të shtoni copëza të përshtatura kodi. Për hollësi, shihni %s."
+
+#: admin/includes/editor.php:246
+msgid "https://contactform7.com/additional-settings/"
+msgstr "https://contactform7.com/additional-settings/"
+
+#: admin/includes/editor.php:194
+msgid "File attachments"
+msgstr "Bashkëngjitje kartelash"
+
+#: admin/includes/editor.php:188
+msgid "Use HTML content type"
+msgstr "Përdor lloj lënde HTML"
+
+#: admin/includes/editor.php:186
+msgid "Exclude lines with blank mail-tags from output"
+msgstr "Përjashto nga përfundimi rreshta me etiketa poste të zbrazëta"
+
+#: admin/includes/editor.php:181
+msgid "Message body"
+msgstr "Lëndë mesazhi"
+
+#: admin/includes/editor.php:172
+msgid "Additional headers"
+msgstr "Krye shtesë"
+
+#: admin/includes/editor.php:163 includes/contact-form-template.php:40
+msgid "Subject"
+msgstr "Subjekt"
+
+#: admin/includes/editor.php:154
+msgid "From"
+msgstr "Nga"
+
+#: admin/includes/editor.php:145
+msgid "To"
+msgstr "Për"
+
+#: admin/includes/editor.php:135
+msgid "In the following fields, you can use these mail-tags:"
+msgstr "Në fushat vijuese mund të përdorni këto etiketa email-i:"
+
+#: admin/includes/editor.php:119
+msgid "Mail (2) is an additional mail template often used as an autoresponder."
+msgstr "Mail (2) është një gjedhe shtesë poste, e përdorur shpesh si një mekanizëm përgjigjesh të vetvetishme."
+
+#: admin/includes/editor.php:85
+msgid "Use Mail (2)"
+msgstr "Përdor Mail (2)"
+
+#: admin/includes/editor.php:84
+msgid "Mail (2)"
+msgstr "Mail (2)"
+
+#. translators: date format, see https://www.php.net/date
+#: admin/includes/class-contact-forms-list-table.php:236
+msgid "Y/m/d"
+msgstr "d/m/Y"
+
+#. translators: %s: title of contact form
+#: admin/includes/class-contact-forms-list-table.php:122
+msgid "Edit &#8220;%s&#8221;"
+msgstr "Përpunoni &#8220;%s&#8221;"
+
+#: admin/includes/class-contact-forms-list-table.php:169
+msgid "Edit"
+msgstr "Përpunoni"
+
+#: admin/includes/class-contact-forms-list-table.php:15
+msgid "Date"
+msgstr "Datë"
+
+#: admin/includes/class-contact-forms-list-table.php:14
+msgid "Author"
+msgstr "Autor"
+
+#: admin/includes/class-contact-forms-list-table.php:13
+msgid "Shortcode"
+msgstr "Kod i shkurtër"
+
+#: admin/includes/class-contact-forms-list-table.php:12
+msgid "Title"
+msgstr "Titull"
+
+#: admin/edit-contact-form.php:267 admin/includes/editor.php:252
+msgid "Additional Settings"
+msgstr "Rregullime Shtesë"
+
+#. translators: %d: number of additional settings
+#: admin/edit-contact-form.php:265
+msgid "Additional Settings (%d)"
+msgstr "Rregullime Shtesë (%d)"
+
+#: admin/edit-contact-form.php:245 admin/includes/editor.php:222
+msgid "Messages"
+msgstr "Mesazhe"
+
+#: admin/edit-contact-form.php:241 admin/includes/editor.php:93
+msgid "Mail"
+msgstr "Postë"
+
+#: admin/edit-contact-form.php:237 admin/includes/editor.php:61
+msgid "Form"
+msgstr "Formular"
+
+#: admin/includes/help-tabs.php:94
+msgid "Support"
+msgstr "Asistencë"
+
+#: admin/includes/help-tabs.php:94
+msgid "https://contactform7.com/support/"
+msgstr "https://contactform7.com/support/"
+
+#: admin/edit-contact-form.php:193 admin/includes/help-tabs.php:93
+msgid "FAQ"
+msgstr "FAQ"
+
+#: admin/edit-contact-form.php:192 admin/includes/help-tabs.php:93
+msgid "https://contactform7.com/faq/"
+msgstr "https://contactform7.com/faq/"
+
+#: admin/includes/help-tabs.php:92
+msgid "Docs"
+msgstr "Dokumentim"
+
+#: admin/edit-contact-form.php:196 admin/includes/help-tabs.php:92
+msgid "https://contactform7.com/docs/"
+msgstr "https://contactform7.com/docs/"
+
+#: admin/edit-contact-form.php:168
+msgid ""
+"You are about to delete this contact form.\n"
+"  'Cancel' to stop, 'OK' to delete."
+msgstr ""
+"Ju ndan një hap nga fshirja e këtij formulari kontaktesh.\n"
+"  'Anulo' për ta ndalur, 'OK' për fshirje."
+
+#: admin/edit-contact-form.php:168
+#: admin/includes/class-contact-forms-list-table.php:90
+msgid "Delete"
+msgstr "Fshije"
+
+#: admin/edit-contact-form.php:153
+#: admin/includes/class-contact-forms-list-table.php:187
+msgid "Duplicate"
+msgstr "Përsëdyte"
+
+#: admin/edit-contact-form.php:139
+msgid "Status"
+msgstr "Gjendje"
+
+#: admin/edit-contact-form.php:125
+msgid "You can also use this old-style shortcode:"
+msgstr "Mund të përdorni edhe këtë kod të shkurtër të stilit të dikurshëm:"
+
+#: admin/edit-contact-form.php:118
+msgid "Copy this shortcode and paste it into your post, page, or text widget content:"
+msgstr "Kopjojeni këtë kod të shkurtër dhe hidheni te postimi, faqja ose lënda juaj për widget-in e teksteve:"
+
+#: admin/edit-contact-form.php:95
+msgid "Enter title here"
+msgstr "Këtu jepni titull"
+
+#: admin/edit-contact-form.php:26 admin/edit-contact-form.php:146
+msgid "Save"
+msgstr "Ruaje"
+
+#: admin/admin.php:673
+msgid "You are not allowed to edit this contact form."
+msgstr "S’keni leje të përpunoni këtë formular kontaktesh."
+
+#: admin/includes/welcome-panel.php:125
+msgid "https://contactform7.com/save-submitted-messages-with-flamingo/"
+msgstr "https://contactform7.com/save-submitted-messages-with-flamingo/"
+
+#: admin/includes/welcome-panel.php:60
+msgid "https://contactform7.com/spam-filtering-with-akismet/"
+msgstr "https://contactform7.com/spam-filtering-with-akismet/"
+
+#: admin/includes/editor.php:129
+msgid "Setting up mail"
+msgstr "Sistemimi i postës"
+
+#: admin/includes/editor.php:128
+msgid "https://contactform7.com/setting-up-mail/"
+msgstr "https://contactform7.com/setting-up-mail/"
+
+#: admin/includes/welcome-panel.php:96
+msgid "https://contactform7.com/donate/"
+msgstr "https://contactform7.com/donate/"
+
+#: admin/includes/welcome-panel.php:85
+msgid "Contact Form 7 needs your support."
+msgstr "Contact Form 7 ka nevojë për përkrahjen tuaj."
+
+#: admin/includes/welcome-panel.php:216
+msgid "Dismiss"
+msgstr "Hidhe tej"
+
+#. translators: 1: version of Contact Form 7, 2: version of WordPress, 3: URL
+#: admin/admin.php:649
+msgid "<strong>Contact Form 7 %1$s requires WordPress %2$s or higher.</strong> Please <a href=\"%3$s\">update WordPress</a> first."
+msgstr "<strong>Contact Form 7 %1$s lyp WordPress %2$s ose më të lartë.</strong> Ju lutemi, së pari <a href=\"%3$s\">përditësoni WordPress-in</a>."
+
+#: admin/admin.php:626
+msgid "Settings"
+msgstr "Rregullime"
+
+#: admin/admin.php:555
+msgid "Contact form deleted."
+msgstr "Formulari i kontakteve u fshi."
+
+#: admin/admin.php:553
+msgid "Contact form saved."
+msgstr "Formulari i kontakteve u ruajt."
+
+#: admin/admin.php:551
+msgid "Contact form created."
+msgstr "Formulari i kontakteve u krijua."
+
+#: admin/admin.php:448
+msgid "Search Contact Forms"
+msgstr "Kërkoni Në Formularë Kontaktesh"
+
+#. translators: %s: search keywords
+#: admin/admin.php:425
+msgid "Search results for &#8220;%s&#8221;"
+msgstr "Përfundime kërkimi për &#822;%s&8221;"
+
+#: admin/admin.php:144
+msgid "The changes you made will be lost if you navigate away from this page."
+msgstr "Ndryshimet e bëra do të humbin nëse largoheni nga kjo faqe."
+
+#: admin/admin.php:330
+msgid "Error in deleting."
+msgstr "Gabim gjatë fshirjes."
+
+#: admin/admin.php:325
+msgid "You are not allowed to delete this item."
+msgstr "S’keni leje ta fshini këtë objekt."
+
+#: admin/admin.php:217 admin/admin.php:281
+msgid "You are not allowed to edit this item."
+msgstr "S’keni leje ta përpunoni këtë objekt."
+
+#: admin/admin.php:66
+msgid "Integration"
+msgstr "Integrim"
+
+#: admin/admin.php:52 admin/admin.php:416 admin/edit-contact-form.php:47
+msgid "Add New"
+msgstr "Shtoni të Ri"
+
+#: admin/admin.php:51 admin/edit-contact-form.php:36
+msgid "Add New Contact Form"
+msgstr "Shtoni Formular të Ri Kontaktesh"
+
+#: admin/admin.php:41 admin/admin.php:409 includes/contact-form.php:47
+msgid "Contact Forms"
+msgstr "Formular Kontaktesh"
+
+#: admin/admin.php:40 admin/edit-contact-form.php:38
+msgid "Edit Contact Form"
+msgstr "Përpunoni Formular Kontaktesh"
+
+#: admin/admin.php:30
+msgid "Contact"
+msgstr "Kontakte"
+
+#. Plugin Name of the plugin
+#: admin/admin.php:29 modules/flamingo.php:208 includes/block-editor/index.js:1
+msgid "Contact Form 7"
+msgstr "Contact Form 7"
