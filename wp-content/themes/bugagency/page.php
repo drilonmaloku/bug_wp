@@ -20,7 +20,7 @@ get_header();
 	<?php while ( have_posts() ) :
 				the_post();
 							while (have_rows('content_elements')) : the_row();
-									require __DIR__ . '\layouts\\' . get_row_layout() . '.php';
+									require __DIR__ . 'layouts/' . get_row_layout() . '.php';
 									wp_reset_postdata();
 							endwhile;
 					endwhile;
