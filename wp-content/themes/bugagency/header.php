@@ -2,13 +2,8 @@
 /**
  * The header for our theme
  *
- * This is the template that displays all of the <head> section and everything up until <div id="content">
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package bugagency
  */
-
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
@@ -16,94 +11,79 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
- 
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-    <?php wp_head(); ?>
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-    <nav class="header">
+<div id="page" class="bugagency">
+
+  <nav class="header">
+    <div class="container">
+      <div class="header_inner">
+
+        <!-- LOGO -->
         <div class="logo_header">
-            <a href="/"><img src="<?php echo get_field('logo','option'); ?>" alt=""></a>
+          <a href="<?php echo esc_url( home_url('/') ); ?>">
+            <img src="<?php echo esc_url( get_field('logo','option') ); ?>" alt="Logo">
+          </a>
         </div>
+
+        
+        <?php
+        wp_nav_menu( array(
+          'theme_location' => 'header',
+          'menu_class'     => 'bugagency_menu',
+          'container'      => false,
+          'depth'          => 1,
+          'fallback_cb'    => false,
+          'walker'         => new class extends Walker_Nav_Menu {
+            function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+              $output .= '<li><a href="' . esc_url( $item->url ) . '">' . esc_html( $item->title ) . '</a>';
+            }
+            function end_el( &$output, $item, $depth = 0, $args = null ) {
+              $output .= '</li>';
+            }
+          }
+        ) );
+        ?>
+
+        <!-- RIGHT SIDE -->
         <div class="hamburger_wrapper">
-            <div class="social_media">
-                <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22.912" height="22.909" viewBox="0 0 22.912 22.909">
-                        <g id="Group_98" data-name="Group 98" transform="translate(0 0)">
-                            <path id="Path_231" data-name="Path 231" d="M1481.1,9656.185v-8.87h.576c.713,0,1.426-.006,2.138,0,.189,0,.248-.056.27-.245.121-1.008.26-2.016.39-3.022a1.884,1.884,0,0,0,0-.2h-3.387c0-.747,0-1.466,0-2.184a3.376,3.376,0,0,1,.057-.621,1.093,1.093,0,0,1,1.058-1.01c.464-.055.935-.046,1.4-.058.32-.008.641,0,.985,0,.008-.109.019-.191.019-.275,0-.852-.008-1.7.006-2.554,0-.23-.071-.3-.292-.3-1.049-.011-2.105-.112-3.146-.029a3.883,3.883,0,0,0-3.617,3.678c-.076,1-.043,2.015-.059,3.021,0,.1,0,.205,0,.331h-2.955v3.466h2.936v8.86c-.08,0-.155.015-.231.015-2.555,0-5.11.01-7.665,0a4.275,4.275,0,0,1-4.2-3.346,4.894,4.894,0,0,1-.1-1.033c-.006-4.718.02-9.436-.014-14.154a4.343,4.343,0,0,1,3.653-4.316,6.082,6.082,0,0,1,.754-.043c4.7,0,9.4.022,14.1-.011a4.334,4.334,0,0,1,4.271,3.267,5.486,5.486,0,0,1,.121,1.084q.012,7.1,0,14.206a4.266,4.266,0,0,1-3.515,4.272,7.775,7.775,0,0,1-1.246.074C1482.662,9656.193,1481.9,9656.185,1481.1,9656.185Z" transform="translate(-1465.278 -9633.278)" fill="#fff"/>
-                        </g>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg id="Group_99" data-name="Group 99" xmlns="http://www.w3.org/2000/svg" width="22.989" height="23" viewBox="0 0 22.989 23">
-                        <path id="Path_232" data-name="Path 232" d="M1574.615,9644.707v5.105a6.316,6.316,0,0,1-5.123,6.277,5.841,5.841,0,0,1-1.1.111q-5.276.012-10.552,0a6.316,6.316,0,0,1-6.114-5.232,7.733,7.733,0,0,1-.1-1.182q-.011-5.123,0-10.244a6.326,6.326,0,0,1,5.342-6.258,5.923,5.923,0,0,1,.92-.074q5.235-.007,10.47,0a6.318,6.318,0,0,1,6.156,5.243,7.447,7.447,0,0,1,.094,1.132C1574.621,9641.293,1574.615,9643,1574.615,9644.707Zm-11.5,9.779q2.543,0,5.086,0a5.3,5.3,0,0,0,.659-.035,4.6,4.6,0,0,0,4.036-4.592q.006-5.145,0-10.292a4.659,4.659,0,0,0-.109-1.015,4.587,4.587,0,0,0-4.542-3.621q-5.12,0-10.239,0a4.877,4.877,0,0,0-.609.036,4.6,4.6,0,0,0-4.042,4.533c-.012,3.47,0,6.938,0,10.408a4.4,4.4,0,0,0,.31,1.628,4.6,4.6,0,0,0,4.336,2.949Q1560.554,9654.49,1563.114,9654.486Z" transform="translate(-1551.628 -9633.209)" fill="#fff"/>
-                        <path id="Path_233" data-name="Path 233" d="M1565.929,9641.375a6.134,6.134,0,1,1-6.139,6.133A6.145,6.145,0,0,1,1565.929,9641.375Zm-.007,1.729a4.406,4.406,0,1,0,4.4,4.4A4.4,4.4,0,0,0,1565.923,9643.1Z" transform="translate(-1554.427 -9636.01)" fill="#fff"/>
-                        <path id="Path_234" data-name="Path 234" d="M1560,9640.4a1.193,1.193,0,1,1-1.185-1.2A1.183,1.183,0,0,1,1560,9640.4Z" transform="translate(-1553.679 -9635.262)" fill="#fff"/>
-                    </svg>
-                </a>
-                <a href="">
-                    <svg id="Group_100" data-name="Group 100" xmlns="http://www.w3.org/2000/svg" width="22.617" height="22.756" viewBox="0 0 22.617 22.756">
-                        <path id="Path_235" data-name="Path 235" d="M1660.713,9644.659v9.64a1.65,1.65,0,0,1-1.739,1.734h-19.149a1.656,1.656,0,0,1-1.691-1.3,2.061,2.061,0,0,1-.037-.428q0-9.647,0-19.295a1.642,1.642,0,0,1,1.724-1.729h19.166a1.641,1.641,0,0,1,1.727,1.726Zm-3.452,7.659c0-.061.008-.114.008-.168,0-1.926.009-3.854-.006-5.779a8.171,8.171,0,0,0-.138-1.4,3.894,3.894,0,0,0-1.172-2.231,3.639,3.639,0,0,0-2.352-.93,3.413,3.413,0,0,0-3.194,1.474l-.112.154-.035-.006v-1.375h-3.406v10.255h3.408v-.19q0-.952,0-1.9c0-1.3,0-2.594.009-3.892a1.811,1.811,0,0,1,.8-1.489,1.655,1.655,0,0,1,2.644.906,4.452,4.452,0,0,1,.133,1.1c.013,1.761.006,3.521.006,5.283v.193Zm-12.323-10.256h-3.393v10.256h3.393Zm-1.639-1.414c.092-.01.241-.02.388-.043a1.757,1.757,0,0,0,.193-3.432,2.48,2.48,0,0,0-1.017-.047,1.758,1.758,0,0,0-1.3,2.624A1.847,1.847,0,0,0,1643.3,9640.648Z" transform="translate(-1638.095 -9633.277)" fill="#fff"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
+
+          <!-- HAMBURGER -->
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+
         </div>
-    </nav>
-    <div id="menu">
-        <div class="menu_wrapper">
-            <div class="menu_top_part_wrapper">
-                <img src="wp-content/uploads/assets/logo_menu.png" alt="">
-                <a class="close_hamburger" href="#">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24.452" height="24.568" viewBox="0 0 24.452 24.568">
-                        <path id="Menu" d="M25.559,22.224l-8.628-9.4L7.758,21.813a1.876,1.876,0,0,1-2.417.112,1.389,1.389,0,0,1-.126-2.133l9.536-9.344L5.782.676a1.393,1.393,0,0,1,.253-2.124,1.871,1.871,0,0,1,2.407.223l8.628,9.4L26.243-.813A1.873,1.873,0,0,1,28.66-.925a1.388,1.388,0,0,1,.127,2.132L19.25,10.552l8.969,9.772a1.392,1.392,0,0,1-.253,2.124,1.85,1.85,0,0,1-1.076.337A1.806,1.806,0,0,1,25.559,22.224Z" transform="translate(-4.775 1.784)" fill="#fff"/>
-                    </svg>
-                </a>
-            </div>
-            <div class="menu_list_wrapper">
-                <ul>
-                    <li><a class="toscroll" href="#section_intro">Home</a></li>
-                    <li><a class="toscroll" href="#section_about">About Us</a></li>
-                    <li><a class="toscroll" href="#section_services">Services</a></li>
-                    <!--<li><a class="toscroll" href="#section_projects">Portfolio</a></li>-->
-                    <li><a class="toscroll" href="#section_process">Process</a></li>
-                    <li><a class="toscroll" href="#section_team">Team</a></li>
-                    <li><a class="toscroll" href="#section_contact">Contact</a></li>
-                </ul>
-            </div>
-            <div class="menu_social_wrapper">
-                <h4>Creative Solutions</h4>
-                <div class="social_media">
-                    <a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22.912" height="22.909" viewBox="0 0 22.912 22.909">
-                            <g id="Group_98" data-name="Group 98" transform="translate(0 0)">
-                                <path id="Path_231" data-name="Path 231" d="M1481.1,9656.185v-8.87h.576c.713,0,1.426-.006,2.138,0,.189,0,.248-.056.27-.245.121-1.008.26-2.016.39-3.022a1.884,1.884,0,0,0,0-.2h-3.387c0-.747,0-1.466,0-2.184a3.376,3.376,0,0,1,.057-.621,1.093,1.093,0,0,1,1.058-1.01c.464-.055.935-.046,1.4-.058.32-.008.641,0,.985,0,.008-.109.019-.191.019-.275,0-.852-.008-1.7.006-2.554,0-.23-.071-.3-.292-.3-1.049-.011-2.105-.112-3.146-.029a3.883,3.883,0,0,0-3.617,3.678c-.076,1-.043,2.015-.059,3.021,0,.1,0,.205,0,.331h-2.955v3.466h2.936v8.86c-.08,0-.155.015-.231.015-2.555,0-5.11.01-7.665,0a4.275,4.275,0,0,1-4.2-3.346,4.894,4.894,0,0,1-.1-1.033c-.006-4.718.02-9.436-.014-14.154a4.343,4.343,0,0,1,3.653-4.316,6.082,6.082,0,0,1,.754-.043c4.7,0,9.4.022,14.1-.011a4.334,4.334,0,0,1,4.271,3.267,5.486,5.486,0,0,1,.121,1.084q.012,7.1,0,14.206a4.266,4.266,0,0,1-3.515,4.272,7.775,7.775,0,0,1-1.246.074C1482.662,9656.193,1481.9,9656.185,1481.1,9656.185Z" transform="translate(-1465.278 -9633.278)" fill="#fff"/>
-                            </g>
-                        </svg>
-                    </a>
-                    <a href="">
-                        <svg id="Group_99" data-name="Group 99" xmlns="http://www.w3.org/2000/svg" width="22.989" height="23" viewBox="0 0 22.989 23">
-                            <path id="Path_232" data-name="Path 232" d="M1574.615,9644.707v5.105a6.316,6.316,0,0,1-5.123,6.277,5.841,5.841,0,0,1-1.1.111q-5.276.012-10.552,0a6.316,6.316,0,0,1-6.114-5.232,7.733,7.733,0,0,1-.1-1.182q-.011-5.123,0-10.244a6.326,6.326,0,0,1,5.342-6.258,5.923,5.923,0,0,1,.92-.074q5.235-.007,10.47,0a6.318,6.318,0,0,1,6.156,5.243,7.447,7.447,0,0,1,.094,1.132C1574.621,9641.293,1574.615,9643,1574.615,9644.707Zm-11.5,9.779q2.543,0,5.086,0a5.3,5.3,0,0,0,.659-.035,4.6,4.6,0,0,0,4.036-4.592q.006-5.145,0-10.292a4.659,4.659,0,0,0-.109-1.015,4.587,4.587,0,0,0-4.542-3.621q-5.12,0-10.239,0a4.877,4.877,0,0,0-.609.036,4.6,4.6,0,0,0-4.042,4.533c-.012,3.47,0,6.938,0,10.408a4.4,4.4,0,0,0,.31,1.628,4.6,4.6,0,0,0,4.336,2.949Q1560.554,9654.49,1563.114,9654.486Z" transform="translate(-1551.628 -9633.209)" fill="#fff"/>
-                            <path id="Path_233" data-name="Path 233" d="M1565.929,9641.375a6.134,6.134,0,1,1-6.139,6.133A6.145,6.145,0,0,1,1565.929,9641.375Zm-.007,1.729a4.406,4.406,0,1,0,4.4,4.4A4.4,4.4,0,0,0,1565.923,9643.1Z" transform="translate(-1554.427 -9636.01)" fill="#fff"/>
-                            <path id="Path_234" data-name="Path 234" d="M1560,9640.4a1.193,1.193,0,1,1-1.185-1.2A1.183,1.183,0,0,1,1560,9640.4Z" transform="translate(-1553.679 -9635.262)" fill="#fff"/>
-                        </svg>
-                    </a>
-                    <a href="">
-                        <svg id="Group_100" data-name="Group 100" xmlns="http://www.w3.org/2000/svg" width="22.617" height="22.756" viewBox="0 0 22.617 22.756">
-                            <path id="Path_235" data-name="Path 235" d="M1660.713,9644.659v9.64a1.65,1.65,0,0,1-1.739,1.734h-19.149a1.656,1.656,0,0,1-1.691-1.3,2.061,2.061,0,0,1-.037-.428q0-9.647,0-19.295a1.642,1.642,0,0,1,1.724-1.729h19.166a1.641,1.641,0,0,1,1.727,1.726Zm-3.452,7.659c0-.061.008-.114.008-.168,0-1.926.009-3.854-.006-5.779a8.171,8.171,0,0,0-.138-1.4,3.894,3.894,0,0,0-1.172-2.231,3.639,3.639,0,0,0-2.352-.93,3.413,3.413,0,0,0-3.194,1.474l-.112.154-.035-.006v-1.375h-3.406v10.255h3.408v-.19q0-.952,0-1.9c0-1.3,0-2.594.009-3.892a1.811,1.811,0,0,1,.8-1.489,1.655,1.655,0,0,1,2.644.906,4.452,4.452,0,0,1,.133,1.1c.013,1.761.006,3.521.006,5.283v.193Zm-12.323-10.256h-3.393v10.256h3.393Zm-1.639-1.414c.092-.01.241-.02.388-.043a1.757,1.757,0,0,0,.193-3.432,2.48,2.48,0,0,0-1.017-.047,1.758,1.758,0,0,0-1.3,2.624A1.847,1.847,0,0,0,1643.3,9640.648Z" transform="translate(-1638.095 -9633.277)" fill="#fff"/>
-                        </svg>
-                    </a>
-                </div>
-            </div>
-        </div>
+
+      </div>
     </div>
+  </nav>
+
+  <div id="content" class="site-content">
+   <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const menu = document.querySelector(".bugagency_menu");
+
+    if (!hamburger || !menu) {
+      console.warn("Hamburger or menu not found");
+      return;
+    }
+
+    hamburger.addEventListener("click", function () {
+      hamburger.classList.toggle("active");
+      menu.classList.toggle("active");
+    });
+  });
+</script>
+

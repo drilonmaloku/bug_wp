@@ -1,51 +1,94 @@
-<?php
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package bugagency
- */
+<?php get_header(); ?>
 
-get_header();
-?>
+<section class="projects-archive">
+    <div class="container">
+        <h1 class="archive-title">Projects</h1>
 
-	<main id="primary" class="site-main">
+        <div class="row g-4">
 
-		<?php if ( have_posts() ) : ?>
+            <div class="col-md-6">
+                <?php 
+                rewind_posts(); 
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+                if (have_posts()) : 
+                    while (have_posts()) : the_post();
+                    $is_small = get_field('small_card');
+                    if (!$is_small) { ?>
+                        <div class="project-card">
+                        <?php 
+                                    $project_image = get_field('image');
+                                    if ($project_image) : ?>
+                                        <a href="<?php the_permalink(); ?>" class="project-link">
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+                                            <div 
+                                                class="project-bg" 
+                                                style="background-image:url('<?php echo esc_url($project_image['url']); ?>')">
+                                            </div>
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+                                            <div class="project-content">
 
-			endwhile;
+                                                <?php if (get_field('title_tagline')) : ?>
+                                                    <p class="project-tagline"><?php the_field('title_tagline'); ?></p>
+                                                <?php endif; ?>
 
-			the_posts_navigation();
+                                                <h3 class="project-title"><?php the_title(); ?></h3>
 
-		else :
+                                                <?php if (get_field('description')) : ?>
+                                                    <p class="project-description"><?php the_field('description'); ?></p>
+                                                <?php endif; ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+                                            </div>
+                                        </a>
+                                    <?php endif; ?>
+                        </div>
+                    <?php }
+                    endwhile; 
+                endif; 
+                ?>
+            </div>
+        <!-- Left column: 2 small cards stacked -->
+            <div class="col-md-6"> 
+                <?php 
+                $count_small = 0;
+                if (have_posts()) : 
+                    while (have_posts()) : the_post();
+                    $is_small = get_field('small_card'); // your checkbox
+                    if ($is_small && $count_small < 2) { ?>
+                        <div class="project-card small">
+                        <?php 
+                                    $project_image = get_field('image');
+                                    if ($project_image) : ?>
+                                        <a href="<?php the_permalink(); ?>" class="project-link">
 
-		endif;
-		?>
+                                            <div 
+                                                class="project-bg" 
+                                                style="background-image:url('<?php echo esc_url($project_image['url']); ?>')">
+                                            </div>
 
-	</main><!-- #main -->
+                                            <div class="project-content">
 
-<?php
-get_sidebar();
-get_footer();
+                                                <?php if (get_field('title_tagline')) : ?>
+                                                    <p class="project-tagline"><?php the_field('title_tagline'); ?></p>
+                                                <?php endif; ?>
+
+                                                <h3 class="project-title"><?php the_title(); ?></h3>
+
+                                                <?php if (get_field('description')) : ?>
+                                                    <p class="project-description"><?php the_field('description'); ?></p>
+                                                <?php endif; ?>
+
+                                            </div>
+                                        </a>
+                                    <?php endif; ?>
+                        </div>
+                        <?php $count_small++;
+                    }
+                    endwhile; 
+                endif; 
+                ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+<?php get_footer(); ?>

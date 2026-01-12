@@ -353,7 +353,8 @@ printf(
 						</code>
 					</p>
 				</div>
-			</div><!-- .row -->
+			</div><!-- 
+			 -->
 			<?php endforeach; ?>
 
 			<div class="row">

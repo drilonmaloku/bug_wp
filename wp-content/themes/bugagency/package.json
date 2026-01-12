@@ -17,10 +17,14 @@
     "url": "https://github.com/Automattic/_s/issues"
   },
   "devDependencies": {
-    "@wordpress/scripts": "^19.2.2",
+    "@wordpress/scripts": "^31.0.0",
+    "autoprefixer": "^10.4.19",
     "dir-archiver": "^1.1.1",
-    "node-sass": "^7.0.1",
-    "rtlcss": "^3.5.0"
+    "laravel-mix": "^6.0.49",
+    "postcss-loader": "^8.1.1",
+    "rtlcss": "^3.5.0",
+    "sass": "^1.74.1",
+    "webpack-cli": "^5.1.4"
   },
   "rtlcssConfig": {
     "options": {
@@ -36,11 +40,21 @@
     "map": false
   },
   "scripts": {
-    "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-    "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
-    "compile:rtl": "rtlcss style.css style-rtl.css",
-    "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
-    "lint:js": "wp-scripts lint-js 'js/*.js'",
-    "bundle": "dir-archiver --src . --dest ../_s.zip --exclude .DS_Store .stylelintrc.json .eslintrc .git .gitattributes .github .gitignore README.md composer.json composer.lock node_modules vendor package-lock.json package.json .travis.yml phpcs.xml.dist sass style.css.map yarn.lock"
-  }
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "prod": "npm run production",
+    "production": "mix --production"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "postcss": "^8.4.12",
+    "postcss-cli": "^9.1.0",
+    "sass-loader": "^10.1.1",
+    "slick-carousel": "^1.8.1"
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

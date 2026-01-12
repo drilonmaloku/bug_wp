@@ -1,4 +1,5 @@
 <?php
+
 /**
  * bugagency functions and definitions
  *
@@ -6,10 +7,12 @@
  *
  * @package bugagency
  */
+// Only enable in development (will log template and conditional tags)
+// DEBUG LOG TEST
 
-if ( ! defined( '_S_VERSION' ) ) {
+if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
-	define( '_S_VERSION', '1.0.0' );
+	define('_S_VERSION', '1.0.0');
 }
 
 /**
@@ -19,17 +22,17 @@ if ( ! defined( '_S_VERSION' ) ) {
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function bugagency_setup() {
+function bugagencypositive_setup()
+{
 	/*
 		* Make theme available for translation.
 		* Translations can be filed in the /languages/ directory.
-		* If you're building a theme based on bugagency, use a find and replace
-		* to change 'bugagency' to the name of your theme in all the template files.
+		* If you're building a theme based on bugagencypositive, use a find and replace
+		* to change 'bugagencypositive' to the name of your theme in all the template files.
 		*/
-	load_theme_textdomain( 'bugagency', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
+	add_theme_support('automatic-feed-links');
 
 	/*
 		* Let WordPress manage the document title.
@@ -37,19 +40,20 @@ function bugagency_setup() {
 		* hard-coded <title> tag in the document head, and expect WordPress to
 		* provide it for us.
 		*/
-	add_theme_support( 'title-tag' );
+	add_theme_support('title-tag');
 
 	/*
 		* Enable support for Post Thumbnails on posts and pages.
 		*
 		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		*/
-	add_theme_support( 'post-thumbnails' );
+	add_theme_support('post-thumbnails');
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus(
 		array(
-			'menu-1' => esc_html__( 'Primary', 'bugagency' ),
+			'header' => esc_html__('Header', 'bugagencypositive'),
+			'footer' => esc_html__('Footer', 'bugagencypositive'),
 		)
 	);
 
@@ -74,7 +78,7 @@ function bugagency_setup() {
 	add_theme_support(
 		'custom-background',
 		apply_filters(
-			'bugagency_custom_background_args',
+			'bugagencypositive_custom_background_args',
 			array(
 				'default-color' => 'ffffff',
 				'default-image' => '',
@@ -83,8 +87,8 @@ function bugagency_setup() {
 	);
 
 	// Add theme support for selective refresh for widgets.
-	add_theme_support( 'customize-selective-refresh-widgets' );
-
+	add_theme_support('customize-selective-refresh-widgets');
+	
 	/**
 	 * Add support for core custom logo.
 	 *
@@ -100,7 +104,7 @@ function bugagency_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'bugagency_setup' );
+add_action('after_setup_theme', 'bugagencypositive_setup');
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -109,22 +113,24 @@ add_action( 'after_setup_theme', 'bugagency_setup' );
  *
  * @global int $content_width
  */
-function bugagency_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'bugagency_content_width', 640 );
+function bugagencypositive_content_width()
+{
+	$GLOBALS['content_width'] = apply_filters('bugagencypositive_content_width', 640);
 }
-add_action( 'after_setup_theme', 'bugagency_content_width', 0 );
+add_action('after_setup_theme', 'bugagencypositive_content_width', 0);
 
 /**
  * Register widget area.
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function bugagency_widgets_init() {
+function bugagencypositive_widgets_init()
+{
 	register_sidebar(
 		array(
-			'name'          => esc_html__( 'Sidebar', 'bugagency' ),
+			'name'          => esc_html__('Sidebar', 'bugagencypositive'),
 			'id'            => 'sidebar-1',
-			'description'   => esc_html__( 'Add widgets here.', 'bugagency' ),
+			'description'   => esc_html__('Add widgets here.', 'bugagencypositive'),
 			'before_widget' => '<section id="%1$s" class="widget %2$s">',
 			'after_widget'  => '</section>',
 			'before_title'  => '<h2 class="widget-title">',
@@ -132,59 +138,141 @@ function bugagency_widgets_init() {
 		)
 	);
 }
-add_action( 'widgets_init', 'bugagency_widgets_init' );
-if( function_exists('acf_add_options_page') ) {
+add_action('widgets_init', 'bugagencypositive_widgets_init');
 
-    acf_add_options_page(array(
-        'page_title'     => 'Theme Settings',
-        'menu_title'    => 'Theme Settings',
-        'menu_slug'     => 'theme-settings',
-        'capability'    => 'edit_posts',
-        'redirect'        => false
-    ));
-
-    acf_add_options_page(array(
-        'page_title'     => 'Footer Settings',
-        'menu_title'    => 'Footer Settings',
-        'menu_slug'     => 'footer-settings',
-        'capability'    => 'edit_posts',
-        'redirect'        => false
-    ));
-		  acf_add_options_page(array(
-        'page_title'     => 'Header Settings',
-        'menu_title'    => 'Header Settings',
-        'menu_slug'     => 'Header-settings',
-        'capability'    => 'edit_posts',
-        'redirect'        => false
-    ));
-}
 /**
  * Enqueue scripts and styles.
  */
-function bugagency_scripts() {
-	wp_enqueue_style( 'bugagency-style-bs4', get_template_directory_uri() . '/plugins/Bootstrap/bootstrap.min.css', array(), _S_VERSION );
-	wp_enqueue_style( 'bugagency-style-slick', get_template_directory_uri() . '/plugins/slick/slick.css', array(), _S_VERSION );
-	wp_enqueue_style( 'bugagency-style', get_template_directory_uri() . '/css/all.css', array(), _S_VERSION );
+function bugagencypositive_scripts()
+{
+	// Deregister WordPress default jQuery and enqueue our own in header
+	wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js', array(), '3.7.1', false);
 
-	wp_style_add_data( 'bugagency-style', 'rtl', 'replace' );
+	// Enqueue CSS files
+	wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css');
+	wp_enqueue_style('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css');
+	wp_enqueue_style('slick-theme', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css');
+	wp_enqueue_style('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.css');
+	wp_enqueue_style('@fancyapps/ui', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css');
+	wp_enqueue_style('bugagencypositive-style', get_template_directory_uri() . '/assets/prod/style.css', array('bootstrap'), time());
 
-	wp_enqueue_script( 'bugagency-jquery', get_template_directory_uri() . '/plugins/jQuery/jquery.min.js', array(), _S_VERSION, false );
-	wp_enqueue_script( 'bugagency-bs4', get_template_directory_uri() . '/plugins/Bootstrap/bootstrap.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'bugagency-slick', get_template_directory_uri() . '/plugins/slick/slick.min.js', array(), _S_VERSION, true );
-	wp_enqueue_script( 'bugagency-scripts', get_template_directory_uri() . '/js/scripts.js', array(), _S_VERSION, true );
+	// Enqueue JS files that depend on jQuery
+	wp_enqueue_script('slick', 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js', array('jquery'), null, true);
+	wp_enqueue_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js', array('jquery'), null, true);
+	wp_enqueue_script('aos', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), null, true);
+	wp_enqueue_script('@fancyapps/ui', 'https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js', array('jquery'), null, true);
+	
+	// Enqueue pagination script
+	wp_enqueue_script('ajax-pagination',  get_template_directory_uri() . '/assets/js/pagination.js', array('jquery'), null, true);
+	wp_localize_script('ajax-pagination', 'ajaxpagination', array(
+		'ajaxurl' => admin_url('admin-ajax.php'),
+		'nonce' => wp_create_nonce('ajax_nonce'),
+	));
 
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	// Enqueue theme scripts last
+	wp_enqueue_script('bugagencypositive-navigation', get_template_directory_uri() . '/assets/prod/scripts.min.js', array('jquery'), _S_VERSION, true);
 }
-add_action( 'wp_enqueue_scripts', 'bugagency_scripts' );
+add_action('wp_enqueue_scripts', 'bugagencypositive_scripts');
 
 
+if (function_exists('acf_add_options_page')) {
 
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
+	acf_add_options_page(array(
+		'page_title'     => 'Theme Settings',
+		'menu_title'    => 'Theme Settings',
+		'menu_slug'     => 'theme-settings',
+		'capability'    => 'edit_posts',
+		'redirect'        => false
+	));
+
+	acf_add_options_page(array(
+		'page_title'     => 'Footer Settings',
+		'menu_title'    => 'Footer Settings',
+		'menu_slug'     => 'footer-settings',
+		'capability'    => 'edit_posts',
+		'redirect'        => false
+	));
 }
+
+add_filter('wpcf7_autop_or_not', '__return_false');
+add_filter('wpcf7_form_elements', function ($content) {
+    $content = preg_replace('/<span[^>]*>/', '', $content);
+    $content = str_replace('</span>', '', $content);
+
+    return $content;
+});
+
+
+
+
+function add_category_image_fields() {
+    if (!function_exists('acf_add_local_field_group')) {
+        return;
+    }
+
+    acf_add_local_field_group(array(
+        'key' => 'group_category_image',
+        'title' => 'Category Image',
+        'fields' => array(
+            array(
+                'key' => 'field_category_image',
+                'label' => 'Category Image',
+                'name' => 'category_image',
+                'type' => 'image',
+                'instructions' => 'Upload an image for this category',
+                'required' => 0,
+                'conditional_logic' => 0,
+                'wrapper' => array(
+                    'width' => '',
+                    'class' => '',
+                    'id' => '',
+                ),
+                'return_format' => 'array',
+                'preview_size' => 'medium',
+                'library' => 'all',
+                'min_width' => '',
+                'min_height' => '',
+                'min_size' => '',
+                'max_width' => '',
+                'max_height' => '',
+                'max_size' => '',
+                'mime_types' => '',
+            ),
+        ),
+        'location' => array(
+            array(
+                array(
+                    'param' => 'taxonomy',
+                    'operator' => '==',
+                    'value' => 'mark',
+                ),
+            ),
+        ),
+        'menu_order' => 0,
+        'position' => 'normal',
+        'style' => 'default',
+        'label_placement' => 'top',
+        'instruction_placement' => 'label',
+        'hide_on_screen' => '',
+        'active' => true,
+        'description' => '',
+    ));
+}
+add_action('acf/init', 'add_category_image_fields');
+
+function projects_post_type() {
+    register_post_type('projects', [
+        'labels' => [
+            'name' => 'Projects',
+            'singular_name' => 'Project'
+        ],
+        'public' => true,
+        'has_archive' => true,
+        'rewrite' => ['slug' => 'projects'],
+        'supports' => ['title', 'thumbnail', 'editor'],
+		'menu_icon' => 'dashicons-portfolio',
+    ]);
+}
+add_action('init', 'projects_post_type');
 
