@@ -52,7 +52,11 @@
         background-position: center;
         background-repeat: no-repeat;
         z-index: 1;
+         }
     }
+     .project-card:hover .project-content {
+    transform: translateY(0);
+    opacity: 1;
 
     }
     .project-content{
@@ -69,6 +73,10 @@
             rgba(0, 0, 0, 0.35),
             rgba(0, 0, 0, 0)
         );
+         /* 👇 animation setup */
+        transform: translateY(40px);
+        opacity: 0;
+        transition: all 0.5s ease;
     }
     .cards-row{
         row-gap: 32px;
@@ -76,7 +84,7 @@
     .project-content h3 {
         font-size: 22px;
         font-weight: 600;
-        margin-bottom: 6px;
+        margin-bottom: 0px;
         color: #ffffff;
     }
 
@@ -85,6 +93,7 @@
         line-height: 20px;
         color: #cbd5f5;
         margin: 0;
+        padding: 0;
     }
 
     /* Button */

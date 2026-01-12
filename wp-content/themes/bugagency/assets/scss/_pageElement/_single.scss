@@ -16,6 +16,8 @@
     max-height: 401px;    /* ensures it never exceeds hero */
     display: block;
     object-fit:fill;    /* crop if needed */
+    border-radius: 16px;
+    filter: brightness(0.6);
 }
 
 .hero-inner {

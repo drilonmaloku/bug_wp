@@ -638,6 +638,10 @@ body {
   background-repeat: no-repeat;
   z-index: 1;
 }
+.projects-section .project-card:hover .project-content {
+  transform: translateY(0);
+  opacity: 1;
+}
 .projects-section .project-content {
   position: absolute;
   inset: 0;
@@ -647,6 +651,10 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
+  /* 👇 animation setup */
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 .projects-section .cards-row {
   row-gap: 32px;
@@ -654,7 +662,7 @@ body {
 .projects-section .project-content h3 {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 0px;
   color: #ffffff;
 }
 .projects-section .project-content p {
@@ -662,6 +670,7 @@ body {
   line-height: 20px;
   color: #cbd5f5;
   margin: 0;
+  padding: 0;
 }
 .projects-section .projects-button {
   margin-top: 32px;
@@ -2135,6 +2144,10 @@ body {
   background-repeat: no-repeat;
   z-index: 1;
 }
+.projects-section .project-card:hover .project-content {
+  transform: translateY(0);
+  opacity: 1;
+}
 .projects-section .project-content {
   position: absolute;
   inset: 0;
@@ -2144,6 +2157,10 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
+  /* 👇 animation setup */
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 .projects-section .cards-row {
   row-gap: 32px;
@@ -2151,7 +2168,7 @@ body {
 .projects-section .project-content h3 {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 6px;
+  margin-bottom: 0px;
   color: #ffffff;
 }
 .projects-section .project-content p {
@@ -2159,6 +2176,7 @@ body {
   line-height: 20px;
   color: #cbd5f5;
   margin: 0;
+  padding: 0;
 }
 .projects-section .projects-button {
   margin-top: 32px;
@@ -3436,6 +3454,8 @@ body {
   display: block;
   -o-object-fit: fill;
      object-fit: fill; /* crop if needed */
+  border-radius: 16px;
+  filter: brightness(0.6);
 }
 
 .hero-inner {
