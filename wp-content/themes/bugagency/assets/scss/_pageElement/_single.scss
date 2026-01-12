@@ -1,0 +1,268 @@
+.project-single{
+    padding: 90px 0;
+}
+
+.hero {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+     margin-bottom: 40px;
+    max-height: 401px;
+     padding: 0 15px;
+}
+.hero img {
+    width: 100%;
+    height: auto;         /* prevents stretching */
+    max-height: 401px;    /* ensures it never exceeds hero */
+    display: block;
+    object-fit:fill;    /* crop if needed */
+}
+
+.hero-inner {
+    position: absolute;
+    top: 30.5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+}
+
+.tagline {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 20px;
+    letter-spacing: 2.8px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+
+}
+
+.hero-title {
+    font-size: 84px;
+    font-weight: 700;
+    font-weight: 700;
+    font-style: Bold;
+    line-height: 88px;
+    letter-spacing: 0px;
+    margin-bottom: 0;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    opacity: 0.8;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 0;
+
+}
+
+/* Cards container - sits under the hero with negative margin to overlap */
+.info-cards {
+    position: relative;
+    z-index: 5;
+   
+}
+
+/* Each card background and border */
+.info-card {
+    background: rgba(12, 14, 22, 0.8);
+    border-radius: 10px;
+    padding: 32px;
+    border: 0.8px solid rgba(30, 41, 57, 1);
+     height: 100%;  /* makes the card fill full height of its flex column */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Card title style */
+.card-title {
+    font-size: 16px;
+    margin-bottom: 24px;
+    font-weight: 400;
+    color: white;
+}
+
+/* Card item is a flex row with icon + text */
+.card-item {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: flex-start;
+}
+
+/* Icon styling */
+.item-icon {
+    line-height: 1;
+    flex-shrink: 0;
+    margin-top: 4px; /* align vertically with text */
+}
+
+
+
+/* Item title is bold and slightly bigger */
+.item-title {
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: white;
+}
+
+/* Item content is smaller with lower opacity */
+.item-content {
+    font-size: 16px;
+    color: rgba(153, 161, 175, 1);
+    line-height: 24px;
+    margin-bottom: 0;
+}
+
+/* Optional: small adjustments for last card item spacing */
+.card-item:last-child {
+    margin-bottom: 0;
+}
+@media (max-width: 991px) {
+  .project-single {
+    padding: 60px 0;
+  }
+
+  .hero {
+    max-height: 320px;
+    margin-bottom: 30px;
+  }
+
+  .hero img {
+    max-height: 320px;
+  }
+
+  .hero-inner {
+    top: 28%;
+    gap: 10px;
+  }
+
+  .tagline {
+    font-size: 20px;
+    letter-spacing: 2.5px;
+  }
+
+  .hero-title {
+    font-size: 64px;
+    line-height: 68px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .info-card {
+    padding: 24px;
+  }
+  .item-title{
+    font-size: 16px;
+  }
+  .item-content{
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .project-single {
+    padding: 40px 0;
+  }
+
+  .hero {
+    max-height: 260px;
+    margin-bottom: 25px;
+  }
+
+  .hero img {
+    max-height: 260px;
+  }
+
+  .hero-inner {
+    top: 25%;
+    gap: 8px;
+  }
+
+  .tagline {
+    font-size: 18px;
+    letter-spacing: 2px;
+  }
+
+  .hero-title {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  .info-cards{
+    row-gap: 25px;
+  }
+  .info-card {
+    padding: 20px;
+}
+}
+
+@media (max-width: 480px) {
+  .project-single {
+    padding: 30px 0;
+  }
+
+  .hero {
+    max-height: 200px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .hero img {
+    max-height: 200px;
+  }
+
+  .hero-inner {
+    top: 22%;
+    gap: 0px;
+  }
+
+  .tagline {
+    font-size: 12px;
+    letter-spacing: 1.8px;
+  }
+
+  .hero-title {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .hero-subtitle {
+    font-size: 14px;
+  }
+
+  .info-card {
+    padding: 16px;
+  }
+
+  .card-title {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .card-item {
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .item-title {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  .item-content {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}

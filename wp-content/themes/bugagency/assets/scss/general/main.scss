@@ -1,0 +1,13 @@
+/* TYPOGRAHPY */
+@import "_typography";
+
+/* GENERAL STYLING */
+@import "_general";
+/* HEADER AND FOOTER */
+
+@import "../_pageComponents/header";
+@import "../_pageComponents/footer";
+
+/* COMPONENTS */
+
+@import "../_pageElement/index";

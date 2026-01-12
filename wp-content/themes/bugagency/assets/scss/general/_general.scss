@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  font-family: Space Grotesk, sans-serif;
+  font-optical-sizing: auto;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-y: none;
+  
+}
+
+body {
+  margin: 0;
+  padding: 0;
+ background: rgba(8, 10, 18, 1) !important;
+  overflow-x: hidden !important;
+  -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: none;
+
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+ 
+}
+.row{
+  margin: 0 auto;
+}
+

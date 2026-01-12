@@ -1,0 +1,339 @@
+.contact {
+  padding: 160px 0 90px;
+  background:rgba(12, 14, 22, 1) ;
+  color: #e5e7eb;
+
+  @media (max-width: 991px) {
+    padding: 80px 0;
+  }
+}
+
+/* LEFT CONTENT */
+.contact_content {
+  max-width: 688px;
+  padding-left: 20px;
+  .contact_eyebrow {
+    font-size: 16px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 16px;
+  }
+
+  .contact_heading {
+    font-family: Arial;
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -1.8px;
+    color: #ffffff;
+
+    @media (max-width: 991px) {
+      font-size: 36px;
+    }
+  }
+
+  .contact_description {
+    padding-top: 8px;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 96px;
+    max-width: 453px;
+  }
+}
+
+/* CONTACT INFO LIST */
+.contact_list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  .contact_item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .contact_icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+     span {
+    width: 20px;
+    height: 20px;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}
+
+  .contact_info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact_label {
+        font-weight: 400;
+
+    font-family: arial;
+    font-size: 12px;
+    line-height: 16px;
+    font-family: Arial;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .contact_value {
+    padding-top: 4px;
+    font-weight: 400;
+    font-family: arial;
+    font-size: 16px;
+    margin-bottom: 0;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+
+   
+  }
+}
+
+/* RIGHT FORM CARD */
+ /* CONTACT FORM CARD */
+/* FORCE CARD SIZE & SHAPE */
+.contact_form {
+  background: #111319;
+  border-radius: 16px;
+  padding: 48px 48px 64px 48px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.info-row{
+  margin: 0 -15px ;
+  row-gap: 16px;
+}
+/* TITLE */
+.contact_form .form_title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 32px;
+  color: #ffffff;
+  line-height: 32px;
+}
+
+/* KILL GRID — STACK EVERYTHING */
+.form_wrapper  {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+/* LABELS */
+.form_wrapper label {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 20px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* INPUTS */
+.form_wrapper input,
+.form_wrapper select,
+.form_wrapper textarea {
+  width: 100%;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 0 16px;
+  font-size: 14px;
+  color: #ffffff;
+  outline: none;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+  margin-bottom: 0;
+}
+
+.form_wrapper textarea {
+  height: 120px;
+  padding: 14px 16px;
+  resize: none;
+}
+
+/* PLACEHOLDERS */
+.form_wrapper ::placeholder {
+  color: #8b93a7;
+}
+
+/* FOCUS STATE */
+.form_wrapper input:focus,
+.form_wrapper select:focus,
+.form_wrapper textarea:focus {
+  border-color: #2563eb;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+}
+
+/* SELECT ARROW */
+.form_wrapper select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L6 6L11 1' stroke='%238B93A7' stroke-width='2'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  
+}
+.full select {
+  width: 100%;             /* lock width to container */
+  max-width: 100%;         /* prevent expansion */
+  box-sizing: border-box;  /* include padding in width */
+  appearance: none;
+}
+
+.form_wrapper select option {
+  background-color: rgba(12, 14, 22, .8); /* dark background */
+  color: #ffffff;
+}
+
+/* BUTTON — FULL WIDTH */
+.form_wrapper button,
+.form_wrapper input[type="submit"] {
+  width: 100%;
+  padding: 16px 0;
+  background: linear-gradient(90deg, #2563eb, #3b82f6);
+  border: none;
+  border-radius: 14px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.25s ease;
+  margin-bottom: 0;
+}
+
+.form_wrapper button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.45);
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    padding: 120px 0 80px;
+  }
+
+  .contact_content .contact_heading {
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  .contact_content .contact_description {
+    margin-bottom: 64px;
+  }
+
+  .contact_form {
+    padding: 40px 40px 56px;
+  }
+}
+@media (max-width: 991px) {
+  .contact {
+    padding: 80px 0;
+  }
+
+  .contact_content {
+    max-width: 100%;
+    padding-left: 0;
+    margin-bottom: 64px;
+    text-align: center;
+  }
+ .contact_list{
+  display: none;
+ }
+
+  .contact_content .contact_heading {
+    font-size: 40px;
+    line-height: 44px;
+  }
+
+  .contact_content .contact_description {
+    max-width: 100%;
+    margin-bottom: 48px;
+  }
+
+  .contact_form {
+    padding: 36px;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 575px) {
+  .contact {
+    padding: 64px 0;
+  }
+
+  .contact_content .contact_heading {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .contact_content .contact_description {
+    font-size: 15px;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+
+  .contact_form {
+    padding: 28px 20px 36px;
+    border-radius: 14px;
+  }
+
+  .contact_form .form_title {
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 24px;
+  }
+
+  .form_wrapper {
+    gap: 20px;
+  }
+
+  .form_wrapper label {
+    font-size: 13px;
+  }
+
+  .form_wrapper input,
+  .form_wrapper select {
+    height: 48px;
+    font-size: 14px;
+  }
+
+  .form_wrapper textarea {
+    height: 110px;
+  }
+
+  .form_wrapper button {
+    font-size: 15px;
+    padding: 14px 0;
+  }
+}
