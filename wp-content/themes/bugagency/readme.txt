@@ -1,4 +1,4 @@
-=== bugagency ===
+=== bugagencypositive ===
 
 Contributors: automattic
 Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
@@ -10,7 +10,7 @@ Stable tag: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
 
-A starter theme called bugagency.
+A starter theme called bugagencypositive.
 
 == Description ==
 
@@ -26,7 +26,7 @@ Description
 
 = Does this theme support any plugins? =
 
-bugagency includes support for WooCommerce and for Infinite Scroll in Jetpack.
+bugagencypositive includes support for WooCommerce and for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

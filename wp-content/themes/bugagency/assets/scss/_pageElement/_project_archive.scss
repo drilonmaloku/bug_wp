@@ -1,0 +1,191 @@
+.projects-archive {
+    padding: 90px 0;
+    background: #07090f;
+
+    .archive-title {
+        color: #fff;
+        font-size: 56px;
+        font-weight: 600;
+        margin-bottom: 40px;
+        padding-left: 15px;
+    }
+
+   .project-card {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0c0e16;
+    margin-bottom: 20px;
+
+    /* Big card fixed height */
+    height: 536px;
+    max-height: 536px;
+
+    &.small {
+        height: 258px;
+        max-height: 258px;
+        margin-bottom: 20px;
+    }
+
+    &:hover .project-bg {
+        transform: scale(1.06);
+    }
+}
+  
+
+
+
+    .project-link {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: block;
+        text-decoration: none;
+        color: inherit;
+    }
+
+
+    .project-bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.6s ease;
+          z-index: 0;
+    }
+
+    /* dark overlay */
+    .project-bg::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            180deg,
+            rgba(0,0,0,0.15) 0%,
+            rgba(0,0,0,0.85) 75%
+        );
+        z-index: 1;
+         pointer-events: none;
+    }
+
+    .project-content {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        padding: 28px;
+        z-index: 2;
+        pointer-events: none;
+    }
+
+    .project-title {
+        font-size: 36px;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 12px;
+    }
+
+    .project-tagline {
+        font-size: 14px;
+        color: rgba(255,255,255,0.6);
+        line-height: 20px;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+    }
+    .project-description{
+        font-size: 16px;
+        line-height: 24px;
+        color:rgba(255, 255, 255, 1);
+        margin-bottom: 0;
+    }
+    
+
+ /* ----------------- MEDIA QUERIES GROUPED ----------------- */
+  @media (max-width: 991px) {
+    .archive-title {
+      font-size: 48px;
+    }
+
+    .project-card {
+      height: 500px;
+      &.small {
+        height: 240px; /* same height for small cards on tablet */
+      }
+    }
+
+    .project-content {
+      padding: 24px;
+    }
+
+    .project-title {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .archive-title {
+      font-size: 36px;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    .project-card {
+      height: 320px;
+      max-height: 320px;
+
+      &.small {
+        height: 320px;
+        max-height: 320px;
+      }
+    }
+
+    .project-content {
+      padding: 20px;
+    }
+
+    .project-title {
+      font-size: 24px;
+    }
+
+    .project-tagline {
+      font-size: 12px;
+    }
+
+    .project-description {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .archive-title {
+      font-size: 28px;
+    }
+
+    .project-card {
+      height: 260px;
+      max-height: 260px;
+
+      &.small {
+        height: 260px;
+        max-height: 260px;
+      }
+    }
+
+    .project-content {
+      padding: 16px;
+    }
+
+    .project-title {
+      font-size: 20px;
+    }
+
+    .project-tagline {
+      font-size: 10px;
+    }
+
+    .project-description {
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}

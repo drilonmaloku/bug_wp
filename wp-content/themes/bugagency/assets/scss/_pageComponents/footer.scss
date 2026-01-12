@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+}
+.site-footer {
+  background: linear-gradient(180deg, #050505 0%, #000000 100%);
+  color: #b5b5b5;
+  padding: 63px 0 ;
+  font-family: 'Arial';
+
+    
+  a {
+    color: #b5b5b5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+
+  /* FOOTER TITLES */
+  .footer-title {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 24px;
+  }
+
+  /* COLUMN 1 */
+  .footer-logo img {
+    height: 40px;
+    margin-bottom: 24px;
+  }
+
+  .footer-description {
+    font-family: Arimo;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 24px;
+    max-width: 220px;
+  }
+
+  /* SOCIAL MEDIA */
+  .menu-social-media {
+    display: flex;
+    gap: 16px;
+
+    a {
+        width: 34px;
+      height: 40px;
+      border-radius: 50%;
+      border: 0.8px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+
+      img {
+        width: 20px;
+        opacity: 0.8;
+      }
+
+      &:hover {
+        background-color: rgba(124, 255, 124, 0.08);
+
+        img {
+          opacity: 1;
+        }
+      }
+    }
+  }
+.footer-menu-list {
+
+  li{
+   margin-bottom: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0px;
+  }
+}
+  /* FOOTER LISTS */
+  .bugagency_menu{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 12px;
+      color: rgba(255, 255, 255, 0.6);
+      font-weight: 400;
+      font-style: Regular;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0px;
+    }
+    li a{
+        font-size: 16px;
+        
+    }
+  }
+
+  /* GET IN TOUCH */
+  .contact-info {
+    p {
+            color: rgba(255, 255, 255, 0.6);
+
+      font-size: 16px;
+      margin-bottom: 12px;
+      line-height: 24px;
+      font-weight: 400;
+    }
+  }
+
+  .working-hours {
+    font-size: 14px;
+    margin-bottom: 16px;
+  }
+
+  /* BOTTOM FOOTER */
+  .bottom-footer {
+    margin-top: 33px;
+    font-size: 12px;
+    color: #777;    
+    a {
+      color: #999;
+
+    }
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 991px) {
+  .site-footer {
+    padding-top: 60px;
+
+    .footer-title {
+      margin-top: 30px;
+    }
+  }
+}

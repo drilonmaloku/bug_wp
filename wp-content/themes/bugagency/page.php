@@ -9,23 +9,30 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package BugAgency
+ * @package bugagency_wealth
  */
 
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+	<main class="site-main">
+		<?php while ( have_posts() ) :
+			the_post();
+             while ( have_rows('content_elements') ) : the_row();
 
-	<?php while ( have_posts() ) :
-				the_post();
-							while (have_rows('content_elements')) : the_row();
-									require __DIR__ . '/layouts/' . get_row_layout() . '.php';
-									wp_reset_postdata();
-							endwhile;
-					endwhile;
-	?>
-	</main><!-- #main -->
+            $layout_name = get_row_layout();
+            $layout_file = get_template_directory() . '/layouts/' . $layout_name . '.php';
+
+            if( file_exists( $layout_file ) ) {
+                require $layout_file;
+            } else {
+                echo 'Layout file not found: ' . $layout_file;
+            }
+
+        endwhile;
+        endwhile;
+		?>
+	</main>
 
 <?php
 get_footer();
