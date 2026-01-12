@@ -100,7 +100,7 @@
   <!-- Bottom Footer -->
   <div class="bottom-footer text-center">
     <p class="mb-0" id="powered-by">
-      © 2025 <a href="https://bugagency.tech/" target="_blank">Bug Agency</a>. All rights reserved.
+      © 2026 <a href="https://bugagency.tech/" target="_blank">Bug Agency</a>. All rights reserved.
     </p>
   </div>
 </footer>
