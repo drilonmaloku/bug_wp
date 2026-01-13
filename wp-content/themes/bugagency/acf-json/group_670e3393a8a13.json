@@ -195,6 +195,26 @@
                     "display": "block",
                     "sub_fields": [
                         {
+                            "key": "field_69664b9035cfd",
+                            "label": "Scrolling Banner",
+                            "name": "scrolling_banner",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": ""
+                        },
+                        {
                             "key": "field_6960cb718264f",
                             "label": "Product Tagline",
                             "name": "product_tagline",
@@ -1479,5 +1499,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1767974466
+    "modified": 1768311730
 }
