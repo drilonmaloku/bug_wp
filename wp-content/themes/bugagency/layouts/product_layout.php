@@ -3,12 +3,28 @@ $product_tagline = get_sub_field('product_tagline');
 $title           = get_sub_field('title');
 $description     = get_sub_field('description');
 $product         = get_sub_field('product_section');
+
+$scrolling_text  = get_sub_field('scrolling_banner');
 ?>
 
 <section class="product-hero">
+
+    <!-- SCROLLING MARQUEE -->
+    <?php if ($scrolling_text) : ?>
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <span><?php echo esc_html($scrolling_text); ?> • </span>
+                <span><?php echo esc_html($scrolling_text); ?> • </span>
+                <span><?php echo esc_html($scrolling_text); ?> • </span>
+                <span><?php echo esc_html($scrolling_text); ?> • </span>
+
+            </div>
+        </div>
+    <?php endif; ?>
+
     <div class="container">
 
-       <div class="header-content">
+        <div class="header-content">
             <?php if ($product_tagline) : ?>
                 <span class="product-tagline">
                     <?php echo esc_html($product_tagline); ?>

@@ -1,7 +1,50 @@
 .product-hero {
    
-  padding: 90px 0;
+  padding: 0px 0px 90px 0px;
   color: #fff;
+
+
+  .ticker-wrap {
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 123, 255, 1);
+    padding: 20px 0;
+    margin-bottom: 90px;
+   }
+
+  .ticker {
+    display: flex;
+    width: fit-content;
+    animation: ticker-scroll 15s linear infinite; // ⬅️ DURATION FIX
+    
+      &:hover {
+      animation-play-state: paused;
+      }
+  }
+  
+
+  .ticker span {
+     display: flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 36px;
+    line-height: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-right: 10px;
+    letter-spacing: 2px;
+    color: #000;
+  }
+
+  @keyframes ticker-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 
 
   /* LEFT CONTENT */

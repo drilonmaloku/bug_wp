@@ -63,7 +63,7 @@
 .service-number {
   font-size: 14px;
   font-weight: 400;
-  color: #5c6cff;
+  color: #007bff99;
 }
 
 .service-title {
@@ -81,7 +81,8 @@
 .service-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  opacity: 0;
+  transition: all .5s ease;
 }
 
 .service-content p {
@@ -91,11 +92,25 @@
 
 .service-item.active .service-content {
   max-height: 300px;
+  opacity: 1;
 }
 
 .service-item.active .service-arrow {
   transform: rotate(45deg);
 }
+
+.service-item:hover .service-content {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.service-item:hover .service-arrow {
+  transform: rotate(45deg);
+}
+.service-item:hover .service-title  {
+  color:#007bff; /* your accent color */
+}
+
 /* =======================
    Media Query: max-width 991px
    ======================= */
