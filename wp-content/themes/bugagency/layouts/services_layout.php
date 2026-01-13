@@ -39,9 +39,7 @@ $heading = get_sub_field('heading');
                     $title       = get_sub_field('service_title');
                     $description = get_sub_field('service_description_');
                 ?>
-
                     <div class="service-item">
-
                         <button type="button" class="service-header-btn">
                             <?php if ($number) : ?>
                                 <span class="service-number">
@@ -56,10 +54,10 @@ $heading = get_sub_field('heading');
                             <?php endif; ?>
 
                             <span class="service-arrow"><svg width="24" height="32" viewBox="0 0 24 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5 20H19" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12 13L19 20L12 27" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-</span>
+                            <path d="M5 20H19" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M12 13L19 20L12 27" stroke="white" stroke-opacity="0.3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            </span>
                         </button>
 
                         <?php if ($description) : ?>

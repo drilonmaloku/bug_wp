@@ -840,7 +840,7 @@ body {
 .service-number {
   font-size: 14px;
   font-weight: 400;
-  color: #5c6cff;
+  color: rgba(0, 123, 255, 0.6);
 }
 
 .service-title {
@@ -857,7 +857,8 @@ body {
 .service-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
 .service-content p {
@@ -867,10 +868,24 @@ body {
 
 .service-item.active .service-content {
   max-height: 300px;
+  opacity: 1;
 }
 
 .service-item.active .service-arrow {
   transform: rotate(45deg);
+}
+
+.service-item:hover .service-content {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.service-item:hover .service-arrow {
+  transform: rotate(45deg);
+}
+
+.service-item:hover .service-title {
+  color: #007bff; /* your accent color */
 }
 
 /* =======================
@@ -2346,7 +2361,7 @@ body {
 .service-number {
   font-size: 14px;
   font-weight: 400;
-  color: #5c6cff;
+  color: rgba(0, 123, 255, 0.6);
 }
 
 .service-title {
@@ -2363,7 +2378,8 @@ body {
 .service-content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  opacity: 0;
+  transition: all 0.5s ease;
 }
 
 .service-content p {
@@ -2373,10 +2389,24 @@ body {
 
 .service-item.active .service-content {
   max-height: 300px;
+  opacity: 1;
 }
 
 .service-item.active .service-arrow {
   transform: rotate(45deg);
+}
+
+.service-item:hover .service-content {
+  max-height: 300px;
+  opacity: 1;
+}
+
+.service-item:hover .service-arrow {
+  transform: rotate(45deg);
+}
+
+.service-item:hover .service-title {
+  color: #007bff; /* your accent color */
 }
 
 /* =======================
