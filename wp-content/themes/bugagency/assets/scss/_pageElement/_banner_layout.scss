@@ -102,9 +102,14 @@ $badge-bg: rgba(0, 123, 255, 1);
   }
 }
 
+@media (max-height: 800px){
+  .banner_layout{
+    padding-top: 30px;
+  }
+}
 @media (max-width: 1200px) {
   .banner_layout {
-   
+      
     .hero-content {
       h1 {
         font-size: 116px;

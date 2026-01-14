@@ -478,6 +478,11 @@ body {
   border-radius: 9999px;
 }
 
+@media (max-height: 800px) {
+  .banner_layout {
+    padding-top: 30px;
+  }
+}
 @media (max-width: 1200px) {
   .banner_layout .hero-content h1 {
     font-size: 116px;
@@ -1220,6 +1225,8 @@ body {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 16px;
+  color: rgb(0, 123, 255);
+  font-weight: 700;
 }
 .contact_content .contact_heading {
   font-family: Arial;
@@ -1755,7 +1762,7 @@ body {
    =============================== */
 @media (max-width: 991px) {
   .product-hero {
-    padding: 80px 0;
+    padding: 0 0 80px 0;
   }
   .product-hero .left-card,
   .product-hero .product-card {
@@ -1775,7 +1782,7 @@ body {
 }
 @media (max-width: 767px) {
   .product-hero {
-    padding: 64px 0;
+    padding: 0 0 64px 0;
   }
   .product-hero .header-content {
     margin-bottom: 40px;
@@ -1787,6 +1794,12 @@ body {
   .product-hero .header-content .product-description {
     font-size: 18px;
     line-height: 26px;
+  }
+  .product-hero .ticker-wrap {
+    padding: 10px;
+  }
+  .product-hero .ticker span {
+    font-size: 24px;
   }
   .product-hero .left-card {
     margin-bottom: 40px;
@@ -1808,9 +1821,6 @@ body {
   }
 }
 @media (max-width: 480px) {
-  .product-hero {
-    padding: 48px 0;
-  }
   .product-hero .header-content .product-title {
     font-size: 36px;
     line-height: 44px;
@@ -2036,6 +2046,11 @@ body {
   border-radius: 9999px;
 }
 
+@media (max-height: 800px) {
+  .banner_layout {
+    padding-top: 30px;
+  }
+}
 @media (max-width: 1200px) {
   .banner_layout .hero-content h1 {
     font-size: 116px;
@@ -2778,6 +2793,8 @@ body {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
   margin-bottom: 16px;
+  color: rgb(0, 123, 255);
+  font-weight: 700;
 }
 .contact_content .contact_heading {
   font-family: Arial;
@@ -3313,7 +3330,7 @@ body {
    =============================== */
 @media (max-width: 991px) {
   .product-hero {
-    padding: 80px 0;
+    padding: 0 0 80px 0;
   }
   .product-hero .left-card,
   .product-hero .product-card {
@@ -3333,7 +3350,7 @@ body {
 }
 @media (max-width: 767px) {
   .product-hero {
-    padding: 64px 0;
+    padding: 0 0 64px 0;
   }
   .product-hero .header-content {
     margin-bottom: 40px;
@@ -3345,6 +3362,12 @@ body {
   .product-hero .header-content .product-description {
     font-size: 18px;
     line-height: 26px;
+  }
+  .product-hero .ticker-wrap {
+    padding: 10px;
+  }
+  .product-hero .ticker span {
+    font-size: 24px;
   }
   .product-hero .left-card {
     margin-bottom: 40px;
@@ -3366,9 +3389,6 @@ body {
   }
 }
 @media (max-width: 480px) {
-  .product-hero {
-    padding: 48px 0;
-  }
   .product-hero .header-content .product-title {
     font-size: 36px;
     line-height: 44px;

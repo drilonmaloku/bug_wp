@@ -15,7 +15,7 @@
 	</div><!-- #content -->
 
 <footer class="site-footer">
-  <div class="container">
+  <div class="container p-0">
     <div class="row footer-menu">
 
       <!-- COLUMN 1: Logo + Description + Social Media -->
