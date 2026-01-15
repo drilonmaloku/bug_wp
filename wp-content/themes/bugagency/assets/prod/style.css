@@ -188,6 +188,9 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
+.header .bugagency_menu li.highlight-menu > a {
+  color: #027bff !important;
+}
 .header .hamburger_wrapper {
   display: none;
 }
@@ -594,8 +597,18 @@ body {
   padding: 90px 0;
   background: rgb(8, 10, 18);
   color: #fff;
-  /* Project card */
-  /* Button */
+  /* ==========================
+     Project Card
+  ========================== */
+  /* ==========================
+     Content (always visible)
+  ========================== */
+  /* ==========================
+     Project Button
+  ========================== */
+  /* ==========================
+     Bottom Section Button
+  ========================== */
 }
 .projects-section .projects-header {
   max-width: 896px;
@@ -622,29 +635,31 @@ body {
   font-size: 20px;
   line-height: 28px;
 }
-.projects-section .project-spacing {
-  padding: 16px;
-}
 .projects-section .project-card {
   position: relative;
-  display: block;
   width: 100%;
   aspect-ratio: 3/2;
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.35s ease;
-  margin-bottom: 0;
 }
-.projects-section .project-card .project-bg {
+.projects-section .project-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
+  /* hover overlay */
 }
-.projects-section .project-card:hover .project-content {
-  transform: translateY(0);
+.projects-section .project-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.projects-section .project-card:hover .project-bg::after {
   opacity: 1;
 }
 .projects-section .project-content {
@@ -655,27 +670,46 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
-  /* 👇 animation setup */
-  transform: translateY(40px);
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-.projects-section .cards-row {
-  row-gap: 32px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
 }
 .projects-section .project-content h3 {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 0px;
+  margin: 0;
   color: #ffffff;
 }
 .projects-section .project-content p {
   font-size: 14px;
   line-height: 20px;
   color: #cbd5f5;
-  margin: 0;
+  margin: 4px 0 0;
   padding: 0;
+}
+.projects-section .project-btn {
+  position: absolute;
+  right: 21px;
+  bottom: 21px;
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.projects-section .project-btn svg {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  stroke: white;
+  fill: white;
+  background-color: rgb(40, 40, 40);
+  border-radius: 40px;
+}
+.projects-section .cards-row {
+  row-gap: 32px;
 }
 .projects-section .projects-button {
   margin-top: 32px;
@@ -694,15 +728,12 @@ body {
 }
 .projects-section .projects-button a:hover {
   opacity: 1;
-  gap: 19px;
-}
-.projects-section .projects-button a:hover::after {
-  transform: translateX(4px);
+  gap: 18px;
 }
 
-/* ============================
+/* ==========================
    Tablet (≤ 991px)
-============================ */
+========================== */
 @media (max-width: 991px) {
   .projects-section {
     padding: 72px 0;
@@ -721,10 +752,14 @@ body {
   .projects-section .project-card {
     aspect-ratio: 16/10;
   }
+  .projects-section .project-btn svg {
+    width: 48px;
+    height: 48px;
+  }
 }
-/* ============================
+/* ==========================
    Mobile (≤ 767px)
-============================ */
+========================== */
 @media (max-width: 767px) {
   .container-class {
     padding: 0;
@@ -749,9 +784,6 @@ body {
     font-size: 11px;
     letter-spacing: 3px;
   }
-  .projects-section .project-spacing {
-    padding: 12px;
-  }
   .projects-section .project-card {
     aspect-ratio: 4/3;
   }
@@ -765,17 +797,22 @@ body {
     font-size: 13px;
   }
 }
-/* ============================
-   Small Mobile (≤ 480px)
-============================ */
+/* ==========================
+   Small Mobile (≤ 575px)
+========================== */
 @media (max-width: 575px) {
   .projects-section h2 {
     font-size: 36px;
     line-height: 40px;
   }
-  .projects-button a {
+  .projects-section .projects-button a {
     font-size: 15px;
     gap: 10px;
+  }
+  .projects-section .project-btn svg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
   }
 }
 .services-section {
@@ -1204,7 +1241,7 @@ body {
 }
 
 .contact {
-  padding: 160px 0 90px;
+  padding: 90px;
   background: rgb(12, 14, 22);
   color: #e5e7eb;
 }
@@ -1879,6 +1916,9 @@ body {
   text-transform: uppercase;
   text-decoration: none;
 }
+.header .bugagency_menu li.highlight-menu > a {
+  color: #027bff !important;
+}
 .header .hamburger_wrapper {
   display: none;
 }
@@ -2162,8 +2202,18 @@ body {
   padding: 90px 0;
   background: rgb(8, 10, 18);
   color: #fff;
-  /* Project card */
-  /* Button */
+  /* ==========================
+     Project Card
+  ========================== */
+  /* ==========================
+     Content (always visible)
+  ========================== */
+  /* ==========================
+     Project Button
+  ========================== */
+  /* ==========================
+     Bottom Section Button
+  ========================== */
 }
 .projects-section .projects-header {
   max-width: 896px;
@@ -2190,29 +2240,31 @@ body {
   font-size: 20px;
   line-height: 28px;
 }
-.projects-section .project-spacing {
-  padding: 16px;
-}
 .projects-section .project-card {
   position: relative;
-  display: block;
   width: 100%;
   aspect-ratio: 3/2;
   border-radius: 16px;
   overflow: hidden;
-  transition: transform 0.35s ease;
-  margin-bottom: 0;
 }
-.projects-section .project-card .project-bg {
+.projects-section .project-bg {
   position: absolute;
   inset: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 1;
+  /* hover overlay */
 }
-.projects-section .project-card:hover .project-content {
-  transform: translateY(0);
+.projects-section .project-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.projects-section .project-card:hover .project-bg::after {
   opacity: 1;
 }
 .projects-section .project-content {
@@ -2223,27 +2275,46 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
-  /* 👇 animation setup */
-  transform: translateY(40px);
-  opacity: 0;
-  transition: all 0.5s ease;
-}
-.projects-section .cards-row {
-  row-gap: 32px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0));
 }
 .projects-section .project-content h3 {
   font-size: 22px;
   font-weight: 600;
-  margin-bottom: 0px;
+  margin: 0;
   color: #ffffff;
 }
 .projects-section .project-content p {
   font-size: 14px;
   line-height: 20px;
   color: #cbd5f5;
-  margin: 0;
+  margin: 4px 0 0;
   padding: 0;
+}
+.projects-section .project-btn {
+  position: absolute;
+  right: 21px;
+  bottom: 21px;
+  display: inline-flex;
+  align-items: center;
+  height: auto;
+  width: auto;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+.projects-section .project-btn svg {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  flex-shrink: 0;
+  vertical-align: middle;
+  stroke: white;
+  fill: white;
+  background-color: rgb(40, 40, 40);
+  border-radius: 40px;
+}
+.projects-section .cards-row {
+  row-gap: 32px;
 }
 .projects-section .projects-button {
   margin-top: 32px;
@@ -2262,15 +2333,12 @@ body {
 }
 .projects-section .projects-button a:hover {
   opacity: 1;
-  gap: 19px;
-}
-.projects-section .projects-button a:hover::after {
-  transform: translateX(4px);
+  gap: 18px;
 }
 
-/* ============================
+/* ==========================
    Tablet (≤ 991px)
-============================ */
+========================== */
 @media (max-width: 991px) {
   .projects-section {
     padding: 72px 0;
@@ -2289,10 +2357,14 @@ body {
   .projects-section .project-card {
     aspect-ratio: 16/10;
   }
+  .projects-section .project-btn svg {
+    width: 48px;
+    height: 48px;
+  }
 }
-/* ============================
+/* ==========================
    Mobile (≤ 767px)
-============================ */
+========================== */
 @media (max-width: 767px) {
   .container-class {
     padding: 0;
@@ -2317,9 +2389,6 @@ body {
     font-size: 11px;
     letter-spacing: 3px;
   }
-  .projects-section .project-spacing {
-    padding: 12px;
-  }
   .projects-section .project-card {
     aspect-ratio: 4/3;
   }
@@ -2333,17 +2402,22 @@ body {
     font-size: 13px;
   }
 }
-/* ============================
-   Small Mobile (≤ 480px)
-============================ */
+/* ==========================
+   Small Mobile (≤ 575px)
+========================== */
 @media (max-width: 575px) {
   .projects-section h2 {
     font-size: 36px;
     line-height: 40px;
   }
-  .projects-button a {
+  .projects-section .projects-button a {
     font-size: 15px;
     gap: 10px;
+  }
+  .projects-section .project-btn svg {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
   }
 }
 .services-section {
@@ -2772,7 +2846,7 @@ body {
 }
 
 .contact {
-  padding: 160px 0 90px;
+  padding: 90px;
   background: rgb(12, 14, 22);
   color: #e5e7eb;
 }

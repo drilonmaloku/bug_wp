@@ -280,6 +280,26 @@
             "ui_on_text": "",
             "ui_off_text": "",
             "ui": 0
+        },
+        {
+            "key": "field_6968b990cba01",
+            "label": "Btn Url",
+            "name": "btn_url",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -300,5 +320,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1767949399
+    "modified": 1768484844
 }
