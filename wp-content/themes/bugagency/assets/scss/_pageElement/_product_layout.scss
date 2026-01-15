@@ -277,7 +277,7 @@
 
 @media (max-width: 991px) {
   .product-hero {
-    padding: 80px 0;
+    padding: 0 0 80px 0;
 
     .left-card,
     .product-card {
@@ -302,7 +302,7 @@
 
 @media (max-width: 767px) {
   .product-hero {
-    padding: 64px 0;
+    padding: 0 0 64px 0;
 
     .header-content {
       margin-bottom: 40px;
@@ -317,7 +317,12 @@
         line-height: 26px;
       }
     }
-  
+    .ticker-wrap{
+      padding: 10px;
+    }  
+    .ticker span{
+      font-size: 24px;
+    }
       
         .left-card {
           margin-bottom: 40px;
@@ -351,7 +356,6 @@
 
 @media (max-width: 480px) {
   .product-hero {
-    padding: 48px 0;
 
     .header-content {
       .product-title {

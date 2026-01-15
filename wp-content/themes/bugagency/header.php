@@ -70,20 +70,28 @@
   </nav>
 
   <div id="content" class="site-content">
-   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const hamburger = document.querySelector(".hamburger");
-    const menu = document.querySelector(".bugagency_menu");
+    
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector(".hamburger");
+  const menu = document.querySelector(".bugagency_menu");
 
-    if (!hamburger || !menu) {
-      console.warn("Hamburger or menu not found");
-      return;
-    }
+  if (!hamburger || !menu) return;
 
-    hamburger.addEventListener("click", function () {
-      hamburger.classList.toggle("active");
-      menu.classList.toggle("active");
+  // Toggle menu on hamburger click
+  hamburger.addEventListener("click", function () {
+    hamburger.classList.toggle("active");
+    menu.classList.toggle("active");
+  });
+
+  // Close menu when a menu link is clicked
+  menu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", function () {
+      hamburger.classList.remove("active");
+      menu.classList.remove("active");
     });
   });
+});
 </script>
+
 
