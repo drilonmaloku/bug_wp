@@ -62,11 +62,11 @@ function cf7ic_generate_CAPTCHA_dup()
     $kc_human = cf7ic_random_sring_generator(20);
 
     // START of captcha block
-    $inner = '<span class="wpcf7-form-control-wrap kc_captcha" data-name="kc_captcha"><span class="wpcf7-form-control wpcf7-cf7ic">';
+    $inner = '<span class="wpcf7-form-control-wrap cf7ic-wpf kc_captcha" data-name="kc_captcha"><span class="wpcf7-form-control wpcf7-cf7ic">';
     $inner .= '<span class="captcha-image cf7ic-style1" style="border:none;">';
     $inner .= '<span class="cf7ic_instructions">';
     $image = '<span>' . $choices[$choice[$human]]['title'] . '</span>';
-    $inner .= sprintf(esc_html__('Please prove you are human by selecting the', 'contact-form-7-image-captcha') . ' %s.', $image);
+    $inner .= sprintf(esc_html__('Please prove you are human by selecting the', 'contact-form-7-image-captcha') . ' %s:', $image);
     $inner .= '<span class="cf7ic-icon-wrapper">';
 
     $i = -1;
@@ -82,7 +82,7 @@ function cf7ic_generate_CAPTCHA_dup()
         }
 
         $icon = '<i class="fa ' . $iconSet['icon'] . '"></i>';
-        $inner .= '<label><input type="radio" name="kc_captcha" value="' . $value . '" />' . $icon . '</label>';
+        $inner .= '<label><input aria-label="' . ($i + 1) . '" type="radio" name="kc_captcha" value="' . $value . '" />' . $icon . '</label>';
     }
 
     $inner .= '<span aria-hidden="true" class="ai1ic-fields">';
