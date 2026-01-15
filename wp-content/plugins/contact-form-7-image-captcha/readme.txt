@@ -1,10 +1,10 @@
-=== Contact Form 7 Image CAPTCHA, WPForms Image CAPTCHA, Contact Form 7 Spam Image CAPTCHA, WPForms Spam Image CAPTCHA, GDPR ===
+=== Image CAPTCHA for Contact Form 7 and WPForms by HookAndHook (DSGVO/GDPR) ===
 Contributors: hookandhook
 Tags: Contact Form 7, Spam, CAPTCHA, GDPR, WPForms
 Requires at least: 4.7
 Requires PHP: 7.0
-Tested up to: 6.6
-Stable tag: 3.3.19
+Tested up to: 6.9
+Stable tag: 3.3.28
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -83,7 +83,7 @@ Maybe <a href="https://translate.wordpress.org/projects/wp-plugins/contact-form-
 *In this case, you have the following options:*
 1. Contribute to the translate.wordpress.org community and translate your language
 2. Use another plugin to create your own local translation
-3. Purchase the WP Image CAPTCHA PRO plugin which offers the possibility to choose your own messages without relying on any external translation - <a href="https://wpimagecaptcha.com/downloads/pro-plugin/?utm_source=wp_readme&utm_medium=wp_readme&wp_campaign=readme" target="_blank">Go Pro!</a>
+3. Purchase the Image CAPTCHA PRO plugin which offers the possibility to choose your own messages without relying on any external translation - <a href="https://wpimagecaptcha.com/downloads/pro-plugin/?utm_source=wp_readme&utm_medium=wp_readme&wp_campaign=readme" target="_blank">Go Pro!</a>
 
 **2 Update WordPress translations**
 You might face the situation that your language pack is completely translated on translate.wordpress.org but the translation still might not work as expected.
@@ -101,7 +101,7 @@ Contact Form 7 saves a meta variable for the language of each respective form an
 = Does the plugin support WPML? =
 
 Yes, both the free and pro versions support WPML.
-In fact, there is an <a href="https://wpml.org/plugin/wp-image-captcha/" target="_blank">active partnership between WPML and WP Image CAPTCHA</a> for seamless integration.
+In fact, there is an <a href="https://wpml.org/plugin/wp-image-captcha/" target="_blank">active partnership between WPML and Image CAPTCHA</a> for seamless integration.
 
 = Issues using WPML, CF7 and our plugin? =
 
@@ -149,7 +149,34 @@ If the styling does not look right, you may need to clear your browser cache. If
 
 == Changelog ==
 
-= 3.3.18 [09/11/2024] =
+= 3.3.28 [12/10/2025] =
+* Rename plugin
+
+= 3.3.27 [12/05/2025] =
+* Tested up to 6.9
+
+= 3.3.26 [06/05/2025] =
+* Same size for icons
+
+= 3.3.25 [06/04/2025] =
+* Fix CSS issue
+
+= 3.3.24 [06/03/2025] =
+* Fix CSS issue
+
+= 3.3.23 [04/18/2025] =
+* Tested up to 6.8
+
+= 3.3.22 [11/14/2024] =
+* Tested up to 6.7
+
+= 3.3.21 [11/09/2024] =
+* Fix CF7 warning: 'Deprecated: WPCF7_TagGenerator::add(): Use of tag generator instances older than version 2 is deprecated. Version 1 instance (WP Image CAPTCHA) detected.'
+
+= 3.3.20 [10/20/2024] =
+* Add aria-labels + style WP Forms captcha
+
+= 3.3.19 [09/11/2024] =
 * Clean up
 
 = 3.3.18 [09/09/2024] =

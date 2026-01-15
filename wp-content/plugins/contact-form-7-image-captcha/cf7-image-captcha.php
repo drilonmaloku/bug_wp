@@ -1,10 +1,10 @@
 <?php
 /**
- * Plugin Name:  WP Image CAPTCHA
+ * Plugin Name:  Image CAPTCHA
  * Plugin URI:   https://wpimagecaptcha.com/
  * Description:  Adds an image CAPTCHA to your "Contact Form 7" and "WPForms" forms.
- * Version:      3.3.19
- * Author:       WP Image CAPTCHA
+ * Version:      3.3.28
+ * Author:       HookAndHook
  * Author URI:   https://wpimagecaptcha.com/
  * License:      GNU General Public License v2
  * License URI:  https://www.gnu.org/licenses/gpl-2.0.html
@@ -31,7 +31,7 @@ function cf7ic_plugin_action_links( $links ) {
  */
 add_action('admin_menu', 'cf7ic_create_menu');
 function cf7ic_create_menu() {
-	add_menu_page('WP Image CAPTCHA', 'WP Image CAPTCHA', 'administrator', 'cf7ic_settings_menu', 'cf7ic_settings_cb', 'dashicons-shield-alt');
+	add_menu_page('Image CAPTCHA', 'Image CAPTCHA', 'administrator', 'cf7ic_settings_menu', 'cf7ic_settings_cb', 'dashicons-shield-alt');
 }
 
 /**
@@ -45,7 +45,7 @@ function cf7ic_settings_cb(){ ?>
     ?>
 
 	<div class="wrap">
-        <h2 class="cf7ic-main-heading">WP Image CAPTCHA Settings</h2>
+        <h2 class="cf7ic-main-heading">Image CAPTCHA Settings</h2>
 
         <form action="options.php" name="ai1ic-form" id="ai1ic-form" method="post">
             <?php settings_fields( 'cf7ic_settings' ); ?>
