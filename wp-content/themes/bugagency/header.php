@@ -42,14 +42,22 @@
           'container'      => false,
           'depth'          => 1,
           'fallback_cb'    => false,
-          'walker'         => new class extends Walker_Nav_Menu {
-            function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
-              $output .= '<li><a href="' . esc_url( $item->url ) . '">' . esc_html( $item->title ) . '</a>';
-            }
-            function end_el( &$output, $item, $depth = 0, $args = null ) {
-              $output .= '</li>';
-            }
+         'walker' => new class extends Walker_Nav_Menu {
+          function start_el( &$output, $item, $depth = 0, $args = null, $id = 0 ) {
+
+            $classes = empty( $item->classes ) ? [] : (array) $item->classes;
+            $class_names = esc_attr( implode( ' ', $classes ) );
+
+            $output .= '<li class="' . $class_names . '">';
+            $output .= '<a href="' . esc_url( $item->url ) . '">';
+            $output .= esc_html( $item->title );
+            $output .= '</a>';
           }
+
+          function end_el( &$output, $item, $depth = 0, $args = null ) {
+            $output .= '</li>';
+          }
+        }
         ) );
         ?>
 

@@ -25,71 +25,99 @@ $button_url     = get_sub_field('button_url');
 
         <div class="row cards-row">
 
-            <?php
-           $projects = new WP_Query([
-                'post_type'      => 'projects',
-                'posts_per_page' => 4,
-                'meta_query'     => [
-                    [
-                        'key'     => 'show_on_landing_page',
-                        'value'   => '1',
-                        'compare' => '='
-                    ]
-                ]
-            ]);
+            <?php if (have_rows('projects')) : ?>
+                <?php while (have_rows('projects')) : the_row(); ?>
 
-            if ($projects->have_posts()) :
-                while ($projects->have_posts()) : $projects->the_post();
+                    <?php
+                    $project = get_sub_field('project'); // Post Object
 
-                  // Get ACF image field safely
-                    $image_field = get_field('image');
+                    if (!$project) {
+                        continue;
+                    }
+
+                    // Set global post data
+                    setup_postdata($project);
+
+                    // Image field from project post
+                    $image_field = get_field('image', $project->ID);
                     $image_url   = '';
 
-                    // Always get a usable URL
                     if ($image_field) {
-                        $image_url = is_array($image_field) 
-                            ? $image_field['url']             // array return
-                            : (is_numeric($image_field) 
-                                ? wp_get_attachment_url($image_field) // ID return
-                                : $image_field);             // URL return
+                        $image_url = is_array($image_field)
+                            ? $image_field['url']
+                            : (is_numeric($image_field)
+                                ? wp_get_attachment_url($image_field)
+                                : $image_field);
                     }
-            ?>
+                    ?>
 
-                <div class="col-12 col-md-6">
-                    <a href="<?php the_permalink(); ?>" class="project-card">
+                    <div class="col-12 col-md-6">
+                        <div class="project-card">
 
-                        <?php if ($image_url) : ?>
-                            <div class="project-bg"
-                                style="background-image: url('<?php echo esc_url($image_url); ?>');">
+                            <?php if ($image_url) : ?>
+                                <div class="project-bg"
+                                    style="background-image: url('<?php echo esc_url($image_url); ?>');">
+                                </div>
+                            <?php endif; ?>
+
+                            <div class="project-content">
+
+                                <?php if (get_field('title_tagline', $project->ID)) : ?>
+                                    <p class="project-tagline">
+                                        <?php echo esc_html(get_field('title_tagline', $project->ID)); ?>
+                                    </p>
+                                <?php endif; ?>
+
+                                <h3 class="project-title"><?php echo esc_html(get_the_title($project)); ?></h3>
+
+                                <?php if (get_field('description', $project->ID)) : ?>
+                                    <p class="project-description">
+                                        <?php echo esc_html(get_field('description', $project->ID)); ?>
+                                    </p>
+                                <?php endif; ?>
+
+                                <?php
+                                $btn_text = get_field('button', $project->ID);
+                                $btn_url  = get_field('btn_url', $project->ID);
+                                ?>
+
+                              <?php
+                                $btn_url = get_field('btn_url', $project->ID);
+                                ?>
+
+                                <?php if ($btn_url) : ?>
+                                    <a href="<?php echo esc_url($btn_url); ?>" class="project-btn" aria-label="View project">
+                                        <svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                                            <path d="M42.5 20C42.5 19.1716 41.8284 18.5 41 18.5L27.5 18.5C26.6716 18.5 26 19.1716 26 20C26 20.8284 26.6716 21.5 27.5 21.5H39.5V33.5C39.5 34.3284 40.1716 35 41 35C41.8284 35 42.5 34.3284 42.5 33.5L42.5 20ZM20 41L21.0607 42.0607L42.0607 21.0607L41 20L39.9393 18.9393L18.9393 39.9393L20 41Z" fill="white"/>
+                                        </svg>
+                                    </a>
+                                <?php endif; ?>
+
+
                             </div>
-                        <?php endif; ?>
-
-                        <div class="project-content">
-                            <?php if (get_field('title_tagline')) : ?>
-                                <p class="project-tagline"><?php the_field('title_tagline'); ?></p>
-                            <?php endif; ?>
-
-                            <h3 class="project-title"><?php the_title(); ?></h3>
-
-                            <?php if (get_field('description')) : ?>
-                                <p class="project-description"><?php the_field('description'); ?></p>
-                            <?php endif; ?>
                         </div>
+                    </div>
 
-                    </a>
-                </div>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
 
-            <?php
-                endwhile;
-                wp_reset_postdata();
-            else :
-                echo '<p>No projects found.</p>';
-            endif;
-            ?>
+            <?php else : ?>
+                <p>No projects selected.</p>
+            <?php endif; ?>
 
         </div>
 
-        <?php if ($button_text) : ?> <div class="projects-button text-center"> <a href="<?php echo esc_url($button_url ?: get_post_type_archive_link('projects')); ?>" class="projects-btn"> <?php echo esc_html($button_text); ?> <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M3.75 9H14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> <path d="M9 3.75L14.25 9L9 14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg> </a> </div> <?php endif; ?>
+        <?php if ($button_text) : ?>
+            <div class="projects-button text-center">
+                <a href="<?php echo esc_url($button_url ?: get_post_type_archive_link('projects')); ?>" class="projects-btn">
+                    <?php echo esc_html($button_text); ?>
+                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.75 9H14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 3.75L14.25 9L9 14.25" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </a>
+            </div>
+        <?php endif; ?>
 
     </div>
 </section>
