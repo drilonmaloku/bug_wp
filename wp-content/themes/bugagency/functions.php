@@ -276,3 +276,56 @@ function projects_post_type() {
 }
 add_action('init', 'projects_post_type');
 
+function register_contact_requests_cpt() {
+  register_post_type('contact_request', [
+    'labels' => [
+      'name'          => 'Contact Requests',
+      'singular_name' => 'Contact Request',
+    ],
+    'public'       => false,
+    'show_ui'      => true,
+    'menu_icon'    => 'dashicons-email',
+    'supports'     => ['title','editor'],
+  ]);
+}
+add_action('init', 'register_contact_requests_cpt');
+
+function handle_contact_form_submission() {
+    if ( isset($_POST['contact_form_submitted']) ) {
+
+        // Sanitize fields
+        $name    = sanitize_text_field($_POST['name']);
+        $email   = sanitize_email($_POST['email']);
+        $phone   = sanitize_text_field($_POST['phone']);
+        $website = esc_url_raw($_POST['website']);
+        $message = sanitize_textarea_field($_POST['message']);
+
+        // Prepare post content
+        $post_content = "Email: $email\n";
+        $post_content .= "Phone: $phone\n";
+        $post_content .= "Website: $website\n";
+        $post_content .= "Message:\n$message";
+
+        // Insert CPT
+        $post_id = wp_insert_post([
+            'post_type'    => 'contact_request',
+            'post_title'   => $name . ' - Contact Request',
+            'post_content' => $post_content,
+            'post_status'  => 'publish',
+        ]);
+
+        if ( $post_id ) {
+            update_post_meta($post_id, 'email', $email);
+            update_post_meta($post_id, 'phone', $phone);
+            update_post_meta($post_id, 'website', $website);
+            update_post_meta($post_id, 'message', $message);
+        }
+
+        // Redirect to prevent double submission
+        $redirect_url = wp_get_referer() ? wp_get_referer() : home_url();
+        $redirect_url = add_query_arg('contact_success', '1', $redirect_url);
+        wp_safe_redirect($redirect_url);
+        exit;
+    }
+}
+add_action('template_redirect', 'handle_contact_form_submission');

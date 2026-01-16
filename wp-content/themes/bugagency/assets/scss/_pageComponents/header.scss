@@ -43,9 +43,11 @@
       text-transform: uppercase;
       text-decoration: none;
     }
-    li.highlight-menu > a {
-  color: #027bff !important;
-  }
+      li.highlight-menu > a {
+    color: #027bff !important;
+    font-weight: 800;
+    text-shadow: 0 0 8px rgba(2, 123, 255, 0.6);
+    }
   }
   /* HAMBURGER */
   .hamburger_wrapper {
