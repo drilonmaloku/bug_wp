@@ -12,10 +12,10 @@
 }
 .hero img {
     width: 100%;
-    height: auto;         /* prevents stretching */
+    height: 100%;         /* prevents stretching */
     max-height: 401px;    /* ensures it never exceeds hero */
     display: block;
-    object-fit:fill;    /* crop if needed */
+    object-fit: cover;    /* crop if needed */
     border-radius: 16px;
     filter: brightness(0.6);
 }

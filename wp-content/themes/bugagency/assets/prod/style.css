@@ -190,6 +190,8 @@ body {
 }
 .header .bugagency_menu li.highlight-menu > a {
   color: #027bff !important;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(2, 123, 255, 0.6);
 }
 .header .hamburger_wrapper {
   display: none;
@@ -320,7 +322,7 @@ body {
   gap: 16px;
 }
 .site-footer .menu-social-media a {
-  width: 34px;
+  width: 40px;
   height: 40px;
   border-radius: 50%;
   border: 0.8px solid rgba(255, 255, 255, 0.2);
@@ -1918,6 +1920,8 @@ body {
 }
 .header .bugagency_menu li.highlight-menu > a {
   color: #027bff !important;
+  font-weight: 800;
+  text-shadow: 0 0 8px rgba(2, 123, 255, 0.6);
 }
 .header .hamburger_wrapper {
   display: none;
@@ -3647,11 +3651,11 @@ body {
 
 .hero img {
   width: 100%;
-  height: auto; /* prevents stretching */
+  height: 100%; /* prevents stretching */
   max-height: 401px; /* ensures it never exceeds hero */
   display: block;
-  -o-object-fit: fill;
-     object-fit: fill; /* crop if needed */
+  -o-object-fit: cover;
+     object-fit: cover; /* crop if needed */
   border-radius: 16px;
   filter: brightness(0.6);
 }
