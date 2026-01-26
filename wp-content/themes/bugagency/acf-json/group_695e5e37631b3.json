@@ -282,9 +282,9 @@
             "ui": 0
         },
         {
-            "key": "field_6968b990cba01",
-            "label": "Btn Url",
-            "name": "btn_url",
+            "key": "field_69777fccb3671",
+            "label": "Button Text",
+            "name": "button_text",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -300,6 +300,23 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_69777fd1b3672",
+            "label": "Button URL",
+            "name": "button_url",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -320,5 +337,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1768484844
+    "modified": 1769439374
 }

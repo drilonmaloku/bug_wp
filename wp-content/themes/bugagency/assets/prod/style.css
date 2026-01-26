@@ -797,6 +797,7 @@ body {
   }
   .projects-section .project-content p {
     font-size: 13px;
+    padding-right: 40px;
   }
 }
 /* ==========================
@@ -2404,6 +2405,7 @@ body {
   }
   .projects-section .project-content p {
     font-size: 13px;
+    padding-right: 40px;
   }
 }
 /* ==========================
@@ -3701,7 +3703,29 @@ body {
   margin-bottom: 0;
 }
 
-/* Cards container - sits under the hero with negative margin to overlap */
+.hero-btn {
+  display: inline-flex;
+  width: auto;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  align-self: center;
+  margin-top: 10px;
+  padding: 14px 36px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 999px;
+  background: #027bff;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: white;
+}
+
 .info-cards {
   position: relative;
   z-index: 5;

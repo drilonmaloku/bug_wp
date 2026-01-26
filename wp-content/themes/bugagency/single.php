@@ -46,6 +46,19 @@ $hero_alt   = $hero_bg ? $hero_bg['alt'] : get_the_title();
                             <?php the_field('description'); ?>
                         </p>
                     <?php endif; ?>
+                    <?php
+                    $button_text = get_field('button_text');
+                    $button_url  = get_field('button_url');
+                    ?>
+
+                    <?php if ($button_text && $button_url) : ?>
+                        <a href="<?php echo esc_url($button_url); ?>"
+                        target="_blank"
+                        rel="noopener"
+                        class="hero-btn">
+                            <?php echo esc_html($button_text); ?>
+                        </a>
+                    <?php endif; ?>
                 </div>
             </div>
         <?php endif; ?>
